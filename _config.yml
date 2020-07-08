@@ -24,13 +24,13 @@ urls:
 
 # Edit these details
 
-author_logo: profile.png
-author: John Doe
+author_logo: profile.png  
+author: Nguyen Tan Dat
 author_bio: Hi, my name is Nguyen Tan Dat. I built this site using devlopr-jekyll :D
 author_email: "dat.nguyen_bk@gmail.com"
 author_location: India
 author_website_url: "http://johndoe.com"
-typewrite-text: devlopr is a jekyll theme built for developers. You can edit this in _config.yml file
+typewrite-text: My Blog is My View, My knowledge is ours
 
 author_work_experiences:
             - company_name: Google
