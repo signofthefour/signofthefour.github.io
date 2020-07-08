@@ -1,45 +1,37 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-gem "jekyll", "~> 4.1"
+gem 'jekyll', '~> 4.0.0'
+gem 'bundler'
+gem 'kramdown'
+gem 'rack-jekyll'
+gem 'rake'
+gem 'puma'
 
-gem "jekyll-theme-hydejack", "~> 9.0"
 
-# IMPORTANT: The followign gem is used to compile math formulas to 
-# KaTeX during site building.
-#
-# There are a couple of things to know about this gem:
-# *  It is not supported on GitHub Pages. 
-#    You have to build the site on your machine before uploading to GitHub,
-#    or use a more permissive cloud building tool such as Netlify.
-# *  You need some kind of JavaScript runtime on your machine.
-#    Usually installing NodeJS will suffice. 
-#    For details, see <https://github.com/kramdown/math-katex#documentation>
-#
-# If you're using the MathJax math engine instead, free to remove the line below:
-gem "kramdown-math-katex"
+# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
+# uncomment the line below. To upgrade, run `bundle update github-pages`.
+# gem "github-pages", group: :jekyll_plugins
 
+# Plugins
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-optional-front-matter"
-  gem "jekyll-paginate"
-  gem "jekyll-readme-index"
-  gem "jekyll-redirect-from"
-  gem "jekyll-relative-links"
-  gem "jekyll-seo-tag", git: "https://github.com/hydecorp/jekyll-seo-tag"
-  gem "jekyll-sitemap"
-  gem "jekyll-titles-from-headings"
-  gem "jekyll-include-cache", git: "https://github.com/hydecorp/jekyll-include-cache"
-  gem "jekyll-last-modified-at"
-  gem "jekyll-compose"
+    gem 'devlopr', '~> 0.4.5'
+    gem 'jgd', '~> 1.12'
+    gem 'jekyll-feed', '~> 0.13.0'
+    gem 'jekyll-paginate', '~> 1.1.0'
+    gem 'jekyll-gist', '~> 1.5.0'
+    gem 'jekyll-seo-tag', '~> 2.6.1'
+    gem 'jekyll-sitemap', '~> 1.4.0'
+    gem 'jekyll-algolia', '~> 1.6'
+    gem 'jekyll-menus', '~> 0.6.1'
+    gem 'jekyll-admin', '~> 0.9.0'
 end
 
-gem 'wdm' if Gem.win_platform?
-gem "tzinfo-data" if Gem.win_platform?
+# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
+# and associated library.
+install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
+  gem "tzinfo", "~> 1.2"
+  gem "tzinfo-data"
+end
+
+# Performance-booster for watching directories on Windows
+gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
