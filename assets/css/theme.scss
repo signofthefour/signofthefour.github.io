@@ -9,11 +9,11 @@ $primary: $teal;
 $dark:    $black;
 $enable-rounded: false;
 
-@import "bootstrap/_functions";
-@import 'bootstrap/_variables';
-@import "bootstrap/_mixins";
-@import 'bootstrap/bootstrap';
-@import '_stars';
+@import "bootstrap/_functions.scss";
+@import 'bootstrap/_variables.scss';
+@import "bootstrap/_mixins.scss";
+@import 'bootstrap/bootstrap.scss';
+@import '_stars.scss';
 
 
 // general
