@@ -1,3 +1,3 @@
-# Sotf blog 
+# Sotf blog
 
 > Share my life
