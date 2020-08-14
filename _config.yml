@@ -4,7 +4,7 @@ title: "SoftBlog"
 description: "have a nice life"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: 'https://signofthefour.github.io'
+baseurl: '/'
 include: ["_pages"]
 permalink: /:title/
 email: nguyentandat.social@gmail.com
