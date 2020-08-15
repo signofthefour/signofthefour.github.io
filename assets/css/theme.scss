@@ -8,8 +8,8 @@ $primary: $teal;
 $dark:    $black;
 $enable-rounded: false;
 
-@import "./_sass/bootstrap/_functions";
-@import './_sass/bootstrap/_variables';
+@import "./_sass/bootstrap/functions";
+@import './_sass/bootstrap/variables';
 @import "./_sass/bootstrap/mixins";
 @import './_sass/bootstrap/bootstrap';
 @import './_sass/stars';
