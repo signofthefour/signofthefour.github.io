@@ -2,7 +2,7 @@
 layout: post
 title:  "Overview of Attention in Deep Learning"
 author: sotf
-categories: [ deeplearning ]
+categories: [ deeplearning, speech processing ]
 image: assets/images/attentionindeeplearning/6.png
 beforetoc: "When reading about the tacotron, I get very confused about attention. What is it, what does it do, and how does it work?"
 toc: true

@@ -2,7 +2,7 @@
 layout: post
 title:  "Co gai co mai toc quen"
 author: sotf
-categories: [ tản văn ]
+categories: [ writehealing, life ]
 image: assets/images/cogaicomaitocquen/1.jpg
 beforetoc: "Một chuyến bus mệt mỏi"
 toc: true
