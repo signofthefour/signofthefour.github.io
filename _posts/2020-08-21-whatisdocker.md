@@ -77,7 +77,12 @@ By default, a container is relatively well isolated from other containers and it
 A container is defined by its image as well as any configuration options you provide to it when you create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.
 
 Example docker run command
-The following command runs an ubuntu container, attaches interactively to your local command-line session, and runs /bin/bash.
+
+```bash
+docker exec -it container /bin/bash
+```
+
+This command runs an ubuntu container, attaches interactively to your local command-line session, and runs /bin/bash.
 
 ## Refference
 
