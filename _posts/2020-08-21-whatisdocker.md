@@ -44,6 +44,7 @@ Docker Engine is a client-server application with these major components:
 ## Docker architecture
 
 Docker uses a client-server architecture where **Docker client** talks to **Docker daemon**, which does a heavy lifting of building, running, and distributing your **Docker containers**. The Docker client and daemon can run on the same system, or you can connect a docker to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets, or a network interface.
+
 ![alt text](https://docs.docker.com/engine/images/architecture.svg "Docker architecture")
 
 ## The Docker client
