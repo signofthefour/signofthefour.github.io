@@ -3,7 +3,7 @@ layout: post
 title:  "What is DOCKER?"
 author: sotf
 categories: [ docker, backend ]
-image: assets/images/whatisdocker/cover.png
+image: assets/images/whatisdocker/1.png
 beforetoc: "Multiple languages, frameworks, architectures, and discontinuous interfaces between tools for each lifecycle stage creates huge complexity. Docker simplifies and accelerates your workflow while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project."
 toc: true
 ---
