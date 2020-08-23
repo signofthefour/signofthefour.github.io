@@ -23,11 +23,13 @@ Traditionally, the Dockerfile is called Dockerfile and is located at the root of
 ```bash
 docker build -f /path/to/a/Dockerfile .
 ```
+
 We can specify that the repo will store this new image if it is successfully built.
 
 ```bash
 docker build -t sotf/myapp .
 ```
+
 To build the image, Docker will run each line in Dockerfile step-by-step, commit the result if necessary, and finally return the ID of the image
 
 Note that each instruction is run independently, and causes a new image to be created - so RUN cd /home will not have any effect on the next instructions.
@@ -223,4 +225,4 @@ RUN echo 'we are running some # of cool things'
 
 ## Conclusion
 
-Now, you can write a Docker file for yourself with all the above knowlegde. Go to the next post for how to build and run an image.
+Now, you can write a Dockerfile for yourself with all the above knowlegde. Go to the next post for how to build and run an image.
