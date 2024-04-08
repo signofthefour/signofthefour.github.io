@@ -21,7 +21,7 @@ __Tan Dat Nguyen__* , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/)*, [
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICABDE 2021</div><img src='images/CalibStyelSpeech.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**Calib-StyleSpeech: A Zero-shot Approach In Voice Cloning Of High Adaptive Text To Speech System With Imbalanced Dataset**](https://link.springer.com/chapter/10.1007/978-3-030-97610-1_6)
+[**Calib-StyleSpeech: A Zero-shot Approach In Voice Cloning Of High Adaptive Text To Speech System With Imbalanced Dataset**](https://link.springer.com/chapter/10.1007/978-3-030-97610-1_6) (<font color="red"> Oral Presentation </font>)
 
 __Nguyen Tan Dat__, Lam Quang Tuong, Nguyen Duc Dung
 
@@ -37,7 +37,7 @@ __Nguyen Tan Dat__, Lam Quang Tuong, Nguyen Duc Dung
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NAFOSTED 2021</div><img src='images/bahnar.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[*A Linguistic-based Transfer Learning Approach for Low-resource Bahnar Text-to-Speech*](https://ieeexplore.ieee.org/document/10013451)
+[*A Linguistic-based Transfer Learning Approach for Low-resource Bahnar Text-to-Speech*](https://ieeexplore.ieee.org/document/10013451) (<font color="red"> Oral Presentation </font>)
 
 __Tan Dat Nguyen__, Quang Tuong Lam, Duc Hao Do, Huu Thuc Cai, Hoang Suong Nguyen, Thanh Hung Vo, Duc Dung Nguyen.
 
