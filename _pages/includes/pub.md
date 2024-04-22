@@ -8,7 +8,7 @@
 [**FreGrad: Lightweight and fast frequency-aware diffusion vocoder**](https://arxiv.org/abs/2401.10032)
 
 __Tan Dat Nguyen__* , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/)*, [Youngjoon Jang](https://art-jang.github.io/), Jaehun Kim, [Joon Son Chung+](https://mmai.io/joon/)
-[**Demo page**](https://mm.kaist.ac.kr/projects/FreGrad/), [**Official Code**](https://github.com/signofthefour/fregrad) (<font color="red"> Oral Presentation </font>)
+[**Demo page**](https://mm.kaist.ac.kr/projects/FreGrad/), [**Official Code**](https://github.com/kaistmm/fregrad) (<font color="red"> Oral Presentation </font>)
 <!-- # ! This one has code for showing citation-->
 <!-- [**Project Page**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 - We employ discrete wavelet transform that helps FreGrad to operate on a simple and concise feature space.
