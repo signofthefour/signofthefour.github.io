@@ -2,6 +2,20 @@
 # 📝 Publications 
 ## 🎙 Speech Synthesis
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/accelerate.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**Accelerating Codec-based Speech Synthesis with Multi-Token Prediction and Speculative Decoding**](https://arxiv.org/abs/2410.13839)
+
+__Tan Dat Nguyen__* , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/)*, [Jeongsoo Choi](https://choijeongsoo.github.io/), Shukjae Choi, Jinseok Park, Younglo Lee, [Joon Son Chung+](https://mmai.io/joon/)
+[**Demo page**](https://mm.kaist.ac.kr/projects/mtp/)
+
+- Proposes a method to accelerate codec-based speech synthesis by predicting multiple tokens per step and optimizing token selection with a Viterbi-based speculative decoding technique.
+- Achieves a 4-5x reduction in synthesis time with minimal or improved speech quality.
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2024</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
