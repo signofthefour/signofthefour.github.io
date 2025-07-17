@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-<!-- <!doctype html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     {% include head.html %}
@@ -30,55 +30,6 @@ layout: compress
     {% include scripts.html %}
 
   </body>
-</html> -->
-
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
-
-  <body>
-    <button class="sidebar__toggle" aria-label="Toggle sidebar">☰ Menu</button>
-    <div class="sidebar__overlay"></div>
-    {% include masthead.html %}
-
-    <main id="main">
-      <aside class="sidebar sidebar__right">
-        <div class="profile_box">
-          <div class="author__avatar">
-            <img src="{{ site.author.avatar | default: '/assets/images/avatar.jpg' }}" alt="Author avatar">
-          </div>
-          <div class="author__content">
-            <h3 class="author__name">{{ site.author.name | default: 'Author' }}</h3>
-            <p class="author__bio">{{ site.author.bio | default: 'Welcome to my site!' }}</p>
-          </div>
-          <div class="author__urls-wrapper">
-            <button class="author__urls-toggle" aria-label="Toggle social links">Links</button>
-            <ul class="author__urls">
-              {% for link in site.author.urls %}
-                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-              {% endfor %}
-            </ul>
-            <div class="author__urls_sm">
-              {% for link in site.author.urls %}
-                <a href="{{ link.url }}" aria-label="{{ link.title }}"><i class="fa fa-{{ link.icon }}"></i></a>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </aside>
-      <div class="page">
-        <div class="page__inner-wrap">
-          <div class="page__content">
-            {{ content }}
-          </div>
-        </div>
-      </div>
-    </main>
-    {% include scripts.html %}
-    <script src="{{ site.baseurl }}/assets/js/sidebar.js"></script>
-  </body>
 </html>
+
+

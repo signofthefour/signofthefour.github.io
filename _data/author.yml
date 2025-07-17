@@ -1,0 +1,10 @@
+name: Tan Dat Nguyen
+avatar: /images/avatar.jpg
+bio: Welcome to my site!
+urls:
+  - title: Twitter
+    url: https://twitter.com/yourhandle
+    icon: twitter
+  - title: GitHub
+    url: https://github.com/yourhandle
+    icon: github
