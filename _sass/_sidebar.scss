@@ -2,36 +2,53 @@
    SIDEBAR
    ========================================================================== */
 
+/* Base variables */
+$base-spacing: 1rem;
+$base-border-radius: 8px;
+
+:root {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #E2E8F0;
+    --secondary-color: #2D3748;
+    --accent-color: #7F9CF5;
+  }
+}
+
 /*
-   Default
+   Default Sidebar
    ========================================================================== */
-
 .sidebar {
-  -webkit-transform: translate3d(0, 0 , 0);
-          transform: translate3d(0, 0 , 0);
-
-  @include clearfix();
-  margin-bottom: 1em;
+  padding: $base-spacing;
+  background: var(--secondary-color);
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  margin-bottom: $base-spacing;
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    grid-column: 1;
+    transform: translateY(0);
     opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
     &:hover {
-      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
   }
 
-
   @include breakpoint($x-large) {
-    padding-right: 0;
+    padding-right: $base-spacing;
   }
 
   h2, h3, h4, h5, h6 {
     margin-bottom: 0;
-    font-family: $sans-serif-narrow;
+    font-family: $sans-serif-narrow, 'Inter', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary-color);
   }
 
   h3, h4 {
@@ -39,24 +56,25 @@
   }
 
   p, li {
-    font-family: $sans-serif;
+    font-family: $sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: $type-size-6;
-    line-height: 1.5;
+    line-height: 1.6;
+    color: var(--primary-color);
   }
 
   img {
     width: 100%;
+    border-radius: $base-border-radius;
   }
 }
 
 .sidebar__right {
-  margin-bottom: 1em;
+  margin-bottom: $base-spacing;
 
   @include breakpoint($large) {
-    position: relative;
-    float: right;
+    grid-column: 2;
     width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
+    margin-left: 0;
     z-index: 10;
   }
 
@@ -66,109 +84,109 @@
 }
 
 /*
-   Author profile and links
+   Author Profile and Links
    ========================================================================== */
-.profile_box{
-  @include breakpoint($large) {
-    display: block;
-  }
+.profile_box {
   display: flex;
   justify-content: flex-start;
-  align-content: flex-start;
   align-items: center;
+  gap: $base-spacing;
+
+  @include breakpoint($large) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
+  display: flex;
   width: 75px;
-  // set width only, for non-square avatars
-  // height: 36px;
 
   @include breakpoint($large) {
-    display: block;
     width: auto;
-    height: auto;
   }
 
   img {
-    max-width: 175px;
+    max-width: 150px;
     min-width: 75px;
     border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
     }
   }
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 10px;
-  min-width: 120px;
-  // padding-right: 25px;
-  line-height: 1;
+  padding-left: $base-spacing;
+  line-height: 1.6;
 
   @include breakpoint($large) {
-    display: block;
+    padding: 0;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
 .author__name {
   margin: 0;
+  font-family: $sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: $type-size-4;
+  color: var(--primary-color);
 
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-.sidebar .author__name {
   @include breakpoint($medium) {
     font-size: $type-size-3;
   }
-  font-family: $sans-serif;
-  font-size: $type-size-4;
+
+  @include breakpoint($large) {
+    margin: 10px 0;
+  }
 }
 
 .author__bio {
   margin: 0;
+  font-size: $type-size-6;
+  color: var(--primary-color);
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
   }
 }
 
 .author__urls-wrapper {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  font-family: $sans-serif;
-  z-index: 10;
-  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   margin-left: auto;
-  cursor: pointer;
 
-  li:last-child {
-    a {
-      margin-bottom: 0;
-    }
+  li:last-child a {
+    margin-bottom: 0;
   }
 
   @include breakpoint($large) {
     display: block;
+    margin-left: 0;
   }
 
   button {
-    margin-bottom: 0;
-    width: 120px;
     padding: 0.5em;
+    width: 120px;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      background: darken(#4C51BF, 10%);
+    }
+
     @include breakpoint($large) {
       display: none;
     }
@@ -180,54 +198,26 @@
   position: absolute;
   right: 0;
   margin-top: 15px;
-  padding: 10px;
+  padding: $base-spacing;
   list-style-type: none;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  background: #fff;
-  z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
-  cursor: default;
+  border: 1px solid var(--primary-color);
+  border-radius: $base-border-radius;
+  background: var(--secondary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 
   @include breakpoint($large) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin: 0;
     padding: 0;
-    border: 0;
+    border: none;
     background: transparent;
     box-shadow: none;
   }
 
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: $border-color transparent;
-    z-index: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    z-index: 1;
-
+  &:before, &:after {
     @include breakpoint($large) {
       display: none;
     }
@@ -240,30 +230,36 @@
   a {
     display: block;
     margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: inherit;
+    padding: 2px 5px;
+    color: var(--primary-color);
     font-size: $type-size-5;
     text-decoration: none;
+    transition: transform 0.2s ease-in-out;
 
-    &:hover {
-      text-decoration: underline;
+    &:hover, &:focus {
+      transform: scale(1.05);
+      color: var(--accent-color);
+      outline: none;
     }
   }
 }
 
-.author__urls_sm{
-  padding: .25em;
+.author__urls_sm {
+  padding: 0.25em;
   font-size: 1.75em;
-  display: block;
+  display: flex;
+  gap: 0.5em;
+
   a {
-    color: inherit;
+    color: var(--primary-color);
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+
+    &:hover, &:focus {
+      color: var(--accent-color);
+      outline: none;
     }
   }
+
   @include breakpoint($large) {
     display: none;
   }

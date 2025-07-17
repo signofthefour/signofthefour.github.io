@@ -2,40 +2,115 @@
    TABLES
    ========================================================================== */
 
+/* Base variables */
+$base-spacing: 1rem;
+$base-border-radius: 8px;
+$global-transition: all 0.2s ease-in-out;
+
+:root {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+  --text-color: #2D3748;
+  --border-color: #CBD5E0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #E2E8F0;
+    --secondary-color: #2D3748;
+    --accent-color: #7F9CF5;
+    --text-color: #E2E8F0;
+    --border-color: #4A5568;
+  }
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  margin-bottom: $base-spacing;
+}
+
 table {
-  margin-bottom: 1em;
+  margin-bottom: $base-spacing;
   width: 100%;
-  font-family: $global-font-family;
+  font-family: $global-font-family, 'Inter', Arial, sans-serif; /* Consistent typography */
   font-size: $type-size-6;
   border-collapse: collapse;
-  // border: 1px solid $light-gray;
+  border: 1px solid var(--border-color); /* Modern border */
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background: var(--secondary-color);
 
   & + table {
-    margin-top: 1em;
+    margin-top: $base-spacing * 2;
   }
 }
 
 thead {
-  background-color: $lighter-gray;
-  // border-bottom: 1px solid $light-gray;
+  background: rgba(var(--primary-color), 0.1); /* Subtle tint for header */
+  border-bottom: 1px solid var(--border-color);
 }
 
 th {
-  padding: 0.5em;
-  font-weight: bold;
+  padding: $base-spacing / 2;
+  font-weight: 600; /* Bolder for emphasis */
   text-align: left;
-  // border-right: 1px solid $light-gray;
-}
-tr {
-  padding-bottom: .5em;
-  padding-top: .5em;
-}
-td {
-  padding: .5em;
-  border-bottom: 1px solid $light-gray;
-  // border-right: 1px solid $light-gray;
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
+
+  &:last-child {
+    border-right: none; /* Remove right border on last header */
+  }
 }
 
-tr, td, th {
+tr {
+  transition: background 0.2s ease-in-out; /* Smooth hover effect */
+
+  &:hover {
+    background: rgba(var(--accent-color), 0.05); /* Subtle hover tint */
+  }
+}
+
+td {
+  padding: $base-spacing / 2;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  color: var(--text-color);
+
+  &:last-child {
+    border-right: none; /* Remove right border on last cell */
+  }
+}
+
+tr:last-child td {
+  border-bottom: none; /* Remove bottom border on last row */
+}
+
+th, td {
   vertical-align: middle;
+}
+
+/* Links within tables */
+table a {
+  color: var(--accent-color); /* Bold color for links */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    color: #3E4299; /* Darker shade for hover */
+    transform: scale(1.05); /* Subtle scale for emphasis */
+    @media (prefers-color-scheme: dark) {
+      color: #6B89E0;
+    }
+  }
+
+  &:focus {
+    color: #3E4299;
+    box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.3); /* Bold focus ring */
+    outline: none;
+    @media (prefers-color-scheme: dark) {
+      color: #6B89E0;
+      box-shadow: 0 0 0 3px rgba(127, 156, 245, 0.3);
+    }
+  }
 }

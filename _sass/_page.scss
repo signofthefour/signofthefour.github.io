@@ -2,34 +2,54 @@
    SINGLE PAGE/POST
    ========================================================================== */
 
+/* Base variables */
+$base-spacing: 1rem;
+$base-border-radius: 20px;
+
+:root {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #E2E8F0;
+    --secondary-color: #2D3748;
+    --accent-color: #7F9CF5;
+  }
+}
+
 #main {
-  @include container;
-  @include clearfix;
-  margin-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: $base-spacing;
+  margin-top: $base-spacing;
+  padding: 0 $base-spacing;
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
+  @include breakpoint($large) {
+    grid-template-columns: 3fr 9fr;
+  }
+
   @include breakpoint($x-large) {
     max-width: $x-large;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .page {
-  @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(0 of 12);
-  }
+  grid-column: 2;
 
   .page__inner-wrap {
-    @include full();
+    width: 100%;
 
     .page__content,
     .page__meta,
     .page__share {
-      @include full();
+      width: 100%;
     }
   }
 }
@@ -37,6 +57,7 @@
 .page__title {
   margin-top: 0;
   line-height: 1;
+  color: var(--primary-color);
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -44,37 +65,32 @@
 }
 
 .page__lead {
-  font-family: $global-font-family;
+  font-family: $global-font-family, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: $type-size-4;
+  color: var(--primary-color);
 }
 
 .page__content {
-  #about-me{
-    margin-top: -10em;
-      &:before { 
-        content: ''; 
-        display: block; 
-        position: relative; 
-        width: 0; 
-        height: 10em; 
-        margin-top: -10em;
-    }
+  #about-me {
+    padding-top: $base-spacing;
   }
+
   h1 {
-    margin-top: 1em;
+    margin-top: $base-spacing;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
   }
 
   p, li, dl {
     font-size: 1em;
+    line-height: 1.6;
+    color: var(--primary-color);
   }
 
-  /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
 
-    /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
         text-indent: $indent-var;
@@ -84,34 +100,37 @@
   }
 
   a {
+    color: var(--accent-color);
     text-decoration: underline;
 
-    &:hover {
-      text-decoration: underline;
+    &:hover, &:focus {
+      color: darken(#4C51BF, 10%);
+      outline: none;
 
       img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       }
     }
   }
 
   dt {
-    margin-top: 1em;
-    font-family: $sans-serif;
+    margin-top: $base-spacing;
+    font-family: $sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: bold;
+    color: var(--primary-color);
   }
 
   dd {
-    margin-left: 1em;
-    font-family: $sans-serif;
+    margin-left: $base-spacing;
+    font-family: $sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: $type-size-6;
+    color: var(--primary-color);
   }
 
   .small {
     font-size: $type-size-6;
   }
 
-  /* blockquote citations */
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
@@ -121,31 +140,25 @@
 .page__hero {
   position: relative;
   margin-bottom: 2em;
-  @include clearfix;
   animation: intro 0.3s both;
   animation-delay: 0.25s;
 
   &--overlay {
-    position: relative;
-    margin-bottom: 2em;
     padding: 3em 0;
-    @include clearfix;
+    background: linear-gradient(135deg, rgba(var(--primary-color), 0.8), rgba(var(--accent-color), 0.6));
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    animation: intro 0.3s both;
-    animation-delay: 0.25s;
 
     a {
       color: #fff;
     }
 
     .wrapper {
-      padding-left: 1em;
-      padding-right: 1em;
+      padding: 0 $base-spacing;
 
       @include breakpoint($x-large) {
         max-width: $x-large;
+        margin: 0 auto;
       }
     }
 
@@ -154,7 +167,7 @@
     .page__lead,
     .btn {
       color: #fff;
-      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     }
 
     .page__lead {
@@ -174,26 +187,24 @@
 .page__hero-image {
   width: 100%;
   height: auto;
-  -ms-interpolation-mode: bicubic;
+  border-radius: $base-border-radius;
 }
 
 .page__hero-caption {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 0 auto;
-  padding: 2px 5px;
+  margin: 0;
+  padding: 5px 10px;
   color: #fff;
-  font-family: $caption-font-family;
+  font-family: $caption-font-family, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: $type-size-7;
-  background: #000;
+  background: rgba(0, 0, 0, 0.5);
   text-align: right;
-  z-index: 5;
-  opacity: 0.5;
-  border-radius: $border-radius 0 $border-radius 0;
+  border-radius: $base-border-radius 0 $base-border-radius 0;
 
   @include breakpoint($large) {
-    padding: 5px 10px;
+    padding: 10px 15px;
   }
 
   a {
@@ -203,13 +214,12 @@
 }
 
 /*
-   Social sharing
+   Social Sharing
    ========================================================================== */
-
 .page__share {
   margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid $border-color;
+  padding-top: $base-spacing;
+  border-top: 1px solid var(--primary-color);
 
   @include breakpoint(max-width $small) {
     .btn span {
@@ -229,25 +239,28 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
-
 /*
-   Page meta
+   Page Meta
    ========================================================================== */
-
 .page__meta {
   margin-top: 2em;
-  color: mix(#fff, $gray, 25%);
-  font-family: $sans-serif;
+  font-family: $sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: $type-size-6;
+  color: var(--primary-color);
 
   p {
     margin: 0;
   }
 
   a {
-    color: inherit;
+    color: var(--accent-color);
+
+    &:hover, &:focus {
+      color: darken(#4C51BF, 10%);
+    }
   }
 }
 
@@ -255,13 +268,12 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
-
 /*
-   Page taxonomy
+   Page Taxonomy
    ========================================================================== */
-
 .page__taxonomy {
   .sep {
     display: none;
@@ -269,6 +281,7 @@
 
   strong {
     margin-right: 10px;
+    color: var(--primary-color);
   }
 }
 
@@ -278,37 +291,39 @@
   margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
-  border: 1px solid $light-gray;
-  border-radius: $border-radius;
+  border: 1px solid var(--primary-color);
+  border-radius: $base-border-radius;
+  color: var(--primary-color);
+  transition: transform 0.2s ease-in-out;
 
-  &:hover {
-    text-decoration: none;
-    color: $link-color-hover;
+  &:hover, &:focus {
+    color: var(--accent-color);
+    transform: scale(1.05);
+    outline: none;
   }
 }
-
 
 /*
    Comments
    ========================================================================== */
-
 .page__comments {
-  @include full();
+  width: 100%;
 }
 
 .page__comments-title {
   margin-top: 2rem;
-  margin-bottom: 10px;
   padding-top: 2rem;
   font-size: $type-size-6;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--primary-color);
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .page__comments-form {
-  padding: 1em;
-  background: $lighter-gray;
-  transition: $global-transition;
+  padding: $base-spacing;
+  background: var(--secondary-color);
+  border-radius: $base-border-radius;
+  transition: all 0.2s ease-in-out;
 
   &.disabled {
     input,
@@ -317,19 +332,17 @@
     label {
       pointer-events: none;
       cursor: not-allowed;
-      filter: alpha(opacity=65);
-      box-shadow: none;
       opacity: 0.65;
     }
   }
 }
 
 .comment {
-  @include clearfix();
-  margin: 1em 0;
+  margin: $base-spacing 0;
+  border-bottom: 1px solid var(--primary-color);
 
-  &:not(:last-child) {
-    border-bottom: 1px solid $border-color;
+  &:last-child {
+    border-bottom: none;
   }
 }
 
@@ -348,12 +361,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: 2px solid var(--accent-color);
 
   @include breakpoint($large) {
     width: 80px;
     height: 80px;
     padding: 5px;
-    border: 1px solid $border-color;
   }
 }
 
@@ -368,40 +381,49 @@
 
 .comment__author {
   margin: 0;
+  color: var(--primary-color);
 
   a {
     text-decoration: none;
+    color: var(--accent-color);
+
+    &:hover, &:focus {
+      color: darken(#4C51BF, 10%);
+    }
   }
 }
 
 .comment__date {
-  @extend .page__meta;
   margin: 0;
+  font-size: $type-size-6;
+  color: var(--primary-color);
 
   a {
     text-decoration: none;
+    color: var(--accent-color);
+
+    &:hover, &:focus {
+      color: darken(#4C51BF, 10%);
+    }
   }
 }
-
 
 /*
    Related
    ========================================================================== */
-
 .page__related {
   margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid $border-color;
-  @include clearfix();
-  float: left;
-
-  @include breakpoint($large) {
-    @include pre(2.5 of 12);
-  }
+  padding-top: $base-spacing;
+  border-top: 1px solid var(--primary-color);
+  width: 100%;
 
   a {
-    color: inherit;
+    color: var(--primary-color);
     text-decoration: none;
+
+    &:hover, &:focus {
+      color: var(--accent-color);
+    }
   }
 }
 
@@ -409,4 +431,5 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
