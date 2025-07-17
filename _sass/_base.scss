@@ -47,6 +47,10 @@ body {
   }
 }
 
+.overflow--hidden {
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: $base-spacing 0 $base-spacing / 2;
   line-height: 1.2;
