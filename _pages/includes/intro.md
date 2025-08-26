@@ -1,7 +1,5 @@
 I currently study in [KAIST EE](https://ee.kaist.ac.kr/en/) as a PhD student. ([Short CV](https://flowcv.com/resume/0sg7gc7cdl))
 
-According to [Google Scholar](https://scholar.google.com/citations?user=4Yr_icEAAAAJ), I have {{ site.data.google_scholar_stats.citedby }} citations.
-
 From March 2023, I work at [Multimodal AI Lab](https://mmai.io/) under the supervision of [Prof. Joon Son Chung](https://mmai.io/joon/).
 
 I am now working on speech/audio synthesis, and interest in multimodal generative models. If you are seeking any form of **academic cooperation**, please feel free to email me at [tandat.kaist@kaist.ac.kr](mailto:tandat.kaist@kaist.ac.kr).
