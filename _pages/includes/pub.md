@@ -2,7 +2,7 @@
 
 ## 🎙 Speech Synthesis
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/500x300.png' alt="Placeholder cover for SPADE" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/spade.png' alt="Placeholder cover for SPADE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS**](https://arxiv.org/abs/2509.20802v1)
@@ -20,7 +20,7 @@ __Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/500x300.png' alt="Placeholder cover for MAGE" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/mage.png' alt="Placeholder cover for MAGE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://openreview.net/pdf?id=ZEPSOsi63p)
@@ -38,7 +38,7 @@ The Hieu Pham*, __Tan Dat Nguyen__*, Phuong Thanh Tran, Joon Son Chung, Duc Dung
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">OpenReview 2024</div><img src='images/500x300.png' alt="Placeholder cover for Language-Agnostic Target Speaker Extraction" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">OpenReview 2024</div><img src='images/whyv2.png' alt="Placeholder cover for Language-Agnostic Target Speaker Extraction" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Language-Agnostic Target Speaker Extraction with Zero-Shot Generalization to Low-Resource Languages**](https://openreview.net/pdf?id=ZEPSOsi63p)
@@ -56,23 +56,6 @@ The Hieu Pham, __Nguyen Tan Dat__, Phuong Thanh Tran, Duc Dung Nguyen.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2024</div><img src='images/500x300.png' alt="Placeholder cover for Wanna Hear Your Voice" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**Wanna Hear Your Voice: Adaptive, Effective, and Language-Agnostic Approach in Voice Extraction**](https://arxiv.org/abs/2410.00527v1)
-
-The Hieu Pham, __Nguyen Tan Dat__, Phuong Thanh Tran, Duc Dung Nguyen.
-
-- Proposes an adaptive extraction pipeline that personalizes target voice retrieval across languages.
-- Highlights a versatile framework with strong zero-shot generalization backed by comprehensive ablations.
-
-<div class="paper-links">
-  <a class="btn" href="https://anonymous.4open.science/w/WHYV/" target="_blank" rel="noopener">Live Demo</a>
-  <a class="btn btn--info" href="https://arxiv.org/abs/2410.00527v1" target="_blank" rel="noopener" aria-label="View paper on arXiv" title="View paper on arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
-</div>
-
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/accelerate.png' alt="Accelerating codec-based speech synthesis illustration" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -92,6 +75,42 @@ __Tan Dat Nguyen__* , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/)*, [
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/adaptvc.png' alt="Placeholder cover for AdaptVC" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**AdaptVC: High Quality Voice Conversion with Adaptive Learning**](https://arxiv.org/abs/2501.01347)
+
+Jaehun Kim, Ji-Hoon Kim, Yeunju Choi, __Tan Dat Nguyen__, Seongkyu Mun, Joon Son Chung.
+
+- Investigates adaptive learning strategies for high-fidelity voice conversion in cross-speaker scenarios.
+- Extended project assets are under preparation.
+
+<div class="paper-links">
+  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
+  <a class="btn btn--info" href="https://arxiv.org/abs/2501.01347" target="_blank" rel="noopener" aria-label="View paper on arXiv" title="View paper on arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
+</div>
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/voicedit.png' alt="Placeholder cover for VoiceDiT" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**VoiceDiT: Dual-Condition Diffusion Transformer for Environment-Aware Speech Synthesis**](https://arxiv.org/pdf/2412.19259)
+
+Jaemin Jung*, Junseok Ahn*, Chaeyoung Jung, __Tan Dat Nguyen__, Youngjoon Jang, Joon Son Chung.
+
+- Combines diffusion and transformer models to incorporate environmental cues into speech synthesis.
+- Additional demos will be released soon.
+
+<div class="paper-links">
+  <a class="btn" href="https://mm.kaist.ac.kr/projects/voicedit/" target="_blank" rel="noopener">Demo page</a>
+  <a class="btn btn--info" href="https://arxiv.org/abs/2412.19259" target="_blank" rel="noopener" aria-label="View paper" title="View paper"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
+</div>
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2024</div><img src='images/500x300.png' alt="FreGrad illustration placeholder" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -106,6 +125,24 @@ __Tan Dat Nguyen__* , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/)*, [
   <a class="btn" href="https://mm.kaist.ac.kr/projects/FreGrad/" target="_blank" rel="noopener">Demo page</a>
   <a class="btn btn--info" href="https://arxiv.org/abs/2401.10032" target="_blank" rel="noopener" aria-label="View paper on arXiv" title="View paper on arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
   <a class="btn btn--success" href="https://github.com/kaistmm/fregrad" target="_blank" rel="noopener" aria-label="View source on GitHub" title="View source on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+</div>
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint 2024</div><img src='images/whyv.png' alt="Placeholder cover for Wanna Hear Your Voice" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**Wanna Hear Your Voice: Adaptive, Effective, and Language-Agnostic Approach in Voice Extraction**](https://arxiv.org/abs/2410.00527v1)
+
+The Hieu Pham, __Nguyen Tan Dat__, Phuong Thanh Tran, Duc Dung Nguyen.
+
+- Proposes an adaptive extraction pipeline that personalizes target voice retrieval across languages.
+- Highlights a versatile framework with strong zero-shot generalization backed by comprehensive ablations.
+
+<div class="paper-links">
+  <a class="btn" href="https://anonymous.4open.science/w/WHYV/" target="_blank" rel="noopener">Live Demo</a>
+  <a class="btn btn--info" href="https://arxiv.org/abs/2410.00527v1" target="_blank" rel="noopener" aria-label="View paper on arXiv" title="View paper on arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
 </div>
 
 </div>
@@ -146,94 +183,39 @@ __Tan Dat Nguyen__, Quang Tuong Lam, Duc Hao Do, Huu Thuc Cai, Hoang Suong Nguye
 </div>
 </div>
 
-## 🔬 Other Research Papers
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/500x300.png' alt="Placeholder cover for AdaptVC" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**AdaptVC: High Quality Voice Conversion with Adaptive Learning**](https://arxiv.org/abs/2501.01347)
-
-Jaehun Kim, Ji-Hoon Kim, Yeunju Choi, __Tan Dat Nguyen__, Seongkyu Mun, Joon Son Chung.
-
-- Investigates adaptive learning strategies for high-fidelity voice conversion in cross-speaker scenarios.
-- Extended project assets are under preparation.
-
-<div class="paper-links">
-  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
-  <a class="btn btn--info" href="https://arxiv.org/abs/2501.01347" target="_blank" rel="noopener" aria-label="View paper on arXiv" title="View paper on arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
-</div>
-
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/500x300.png' alt="Placeholder cover for VoiceDiT" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**VoiceDiT: Dual-Condition Diffusion Transformer for Environment-Aware Speech Synthesis**](https://arxiv.org/pdf/2412.19259)
-
-Jaemin Jung*, Junseok Ahn*, Chaeyoung Jung, __Tan Dat Nguyen__, Youngjoon Jang, Joon Son Chung.
-
-- Combines diffusion and transformer models to incorporate environmental cues into speech synthesis.
-- Additional demos will be released soon.
-
-<div class="paper-links">
-  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
-  <a class="btn btn--info" href="https://arxiv.org/pdf/2412.19259" target="_blank" rel="noopener" aria-label="View paper" title="View paper"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
-</div>
-
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">FICC 2022</div><img src='images/500x300.png' alt="Placeholder cover for instance-based transfer learning" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">FICC 2022</div><img src='images/FICC2022.png' alt="Placeholder cover for instance-based transfer learning" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Instance-Based Transfer Learning Approach for Vietnamese Speech Synthesis with Very Low Resource**](https://link.springer.com/chapter/10.1007/978-3-030-98015-3_10)
 
 Tuong Q. Lam, Dung D. Nguyen, __Dat T. Nguyen__, Han K. Lam, Thuc H. Cai, Suong N. Hoang, Hao D. Do.
 
-- Applies instance-based transfer learning to address low-resource Vietnamese speech synthesis settings.
-- Supplementary materials are being curated.
 
 <div class="paper-links">
-  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
   <a class="btn btn--info" href="https://link.springer.com/chapter/10.1007/978-3-030-98015-3_10" target="_blank" rel="noopener" aria-label="View paper" title="View paper"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
 </div>
 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RIVF 2021</div><img src='images/500x300.png' alt="Placeholder cover for CNN-based Vietnamese speech synthesis" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RIVF 2021</div><img src='images/blank.png' alt="Placeholder cover for CNN-based Vietnamese speech synthesis" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**CNN-based Vietnamese Speech Synthesis with Limited Dataset**]()
 
 Lam Quang Tuong, __Nguyen Tan Dat__, Lam Kha Han, Do Duc Hao.
 
-- Early exploration of convolutional architectures for Vietnamese speech synthesis under data constraints.
-- Publication details will be updated soon.
-
-<div class="paper-links">
-  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
-  <span class="btn btn--info disabled" role="button" aria-disabled="true"><i class="ai ai-arxiv" aria-hidden="true"></i></span>
-</div>
 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RIVF 2021</div><img src='images/500x300.png' alt="Placeholder cover for Instanced-based Transfer Learning" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RIVF 2021</div><img src='images/blank.png' alt="" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Instanced-based Transfer Learning for Vietnamese Speech Synthesis**]()
 
 Lam Quang Tuong, __Nguyen Tan Dat__, Do Duc Hao.
-
-- Studies transfer learning strategies tailored to Vietnamese speech synthesis tasks.
-- Full paper and demos will be provided later.
-
-<div class="paper-links">
-  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
-  <span class="btn btn--info disabled" role="button" aria-disabled="true"><i class="ai ai-arxiv" aria-hidden="true"></i></span>
-</div>
 
 </div>
 </div>

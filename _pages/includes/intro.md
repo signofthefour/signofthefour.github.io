@@ -1,4 +1,4 @@
-I currently study in [KAIST EE](https://ee.kaist.ac.kr/en/) as a PhD student. ([Short CV](https://flowcv.com/resume/0sg7gc7cdl))
+I currently study in [KAIST EE](https://ee.kaist.ac.kr/en/) as a PhD student. ([Academic CV](https://soapy-cave-11d.notion.site/CV-Tan-Dat-Nguyen-KAIST-27a367388c7680219580cef443b8eec4))
 
 From March 2023, I work at [Multimodal AI Lab](https://mmai.io/) under the supervision of [Prof. Joon Son Chung](https://mmai.io/joon/).
 
