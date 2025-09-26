@@ -62,7 +62,7 @@ The Hieu Pham, __Nguyen Tan Dat__, Phuong Thanh Tran, Duc Dung Nguyen.
 
 [**Accelerating Codec-based Speech Synthesis with Multi-Token Prediction and Speculative Decoding**](https://arxiv.org/abs/2410.13839)
 
-__Tan Dat Nguyen__* , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/)*, [Jeongsoo Choi](https://choijeongsoo.github.io/), Shukjae Choi, Jinseok Park, Younglo Lee, [Joon Son Chung+](https://mmai.io/joon/)
+__Tan Dat Nguyen__ , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/), [Jeongsoo Choi](https://choijeongsoo.github.io/), Shukjae Choi, Jinseok Park, Younglo Lee, [Joon Son Chung+](https://mmai.io/joon/)
 
 - Proposes a method to accelerate codec-based speech synthesis by predicting multiple tokens per step and optimizing token selection with a Viterbi-based speculative decoding technique.
 - Achieves a 4-5x reduction in synthesis time with minimal or improved speech quality.
