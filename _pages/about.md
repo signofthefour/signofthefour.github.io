@@ -24,7 +24,7 @@ redirect_from:
 ## 🌍 Visitors
 
 <div class="visitor-map" aria-label="Visitor locations">
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=cYyq_LnJQ6KCqpUnMqGX2-jL4VxsaSO55RKm9birgzc"></script>
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=cYyq_LnJQ6KCqpUnMqGX2-jL4VxsaSO55RKm9birgzc"></script>
 </div>
 
 If you like the template of this homepage, please go to [AcadHomepage ![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io?style=social)](https://github.com/RayeRen/acad-homepage.github.io). Thank YiRen for providing a clean yet beautiful template.

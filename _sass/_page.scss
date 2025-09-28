@@ -200,14 +200,27 @@ $base-border-radius: 20px;
       font-size: $type-size-7;
       color: var(--primary-color);
       opacity: 0.65;
+
+      &.is-hidden {
+        display: none;
+      }
     }
   }
 
   .visitor-map {
-    margin: 2.5rem 0;
+    margin: 2.5rem auto;
     display: flex;
     justify-content: center;
+    width: clamp(140px, 20%, 220px);
     filter: drop-shadow(0 8px 24px rgba(45, 55, 72, 0.15));
+
+    iframe,
+    canvas,
+    > div {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
   }
 }
 
