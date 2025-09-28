@@ -148,6 +148,80 @@ $base-border-radius: 20px;
       text-decoration: none;
     }
   }
+
+  .scholar-metrics {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    &__card {
+      background-color: var(--secondary-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(45, 55, 72, 0.12);
+      min-width: 16rem;
+      max-width: 22rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    &__label {
+      font-size: $type-size-6;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      opacity: 0.75;
+    }
+
+    &__count {
+      font-family: $global-font-family, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    &__description {
+      font-size: $type-size-6;
+      color: var(--primary-color);
+      opacity: 0.8;
+    }
+
+    &__actions {
+      margin-top: 0.5rem;
+
+      .btn {
+        text-decoration: none;
+      }
+    }
+
+    &__meta {
+      font-size: $type-size-7;
+      color: var(--primary-color);
+      opacity: 0.65;
+
+      &.is-hidden {
+        display: none;
+      }
+    }
+  }
+
+  .visitor-map {
+    margin: 2.5rem auto;
+    display: flex;
+    justify-content: center;
+    width: clamp(140px, 20%, 220px);
+    filter: drop-shadow(0 8px 24px rgba(45, 55, 72, 0.15));
+
+    iframe,
+    canvas,
+    > div {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
 }
 
 .page__hero {
