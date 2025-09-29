@@ -20,14 +20,12 @@
     </div>
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
           {% for link in site.data.navigation.main %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
-        <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
@@ -35,18 +33,6 @@
 
 <script>
   (function() {
-    var greedyToggle = document.querySelector('.greedy-nav button');
-    var visibleLinks = document.querySelector('.greedy-nav .visible-links');
-    var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
-
-    if (greedyToggle && visibleLinks && hiddenLinks) {
-      greedyToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        visibleLinks.classList.toggle('active');
-        hiddenLinks.classList.toggle('active');
-      });
-    }
-
     var toggleButton = document.querySelector('.theme-toggle');
     if (!toggleButton) {
       return;
