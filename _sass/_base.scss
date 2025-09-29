@@ -15,6 +15,8 @@ $global-transition: all 0.2s ease-in-out;
   --border-color: #CBD5E0;
   --code-background-color: #F7FAFC;
   --background-color: #FFFFFF;
+  --menu-background-color: rgba(76, 81, 191, 0.08);
+  --menu-border-color: rgba(76, 81, 191, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +28,8 @@ $global-transition: all 0.2s ease-in-out;
     --border-color: #4A5568;
     --code-background-color: #2D3748;
     --background-color: #2D3748;
+    --menu-background-color: rgba(127, 156, 245, 0.18);
+    --menu-border-color: rgba(127, 156, 245, 0.38);
   }
 }
 
@@ -37,6 +41,8 @@ $global-transition: all 0.2s ease-in-out;
   --border-color: #CBD5E0;
   --code-background-color: #F7FAFC;
   --background-color: #FFFFFF;
+  --menu-background-color: rgba(76, 81, 191, 0.08);
+  --menu-border-color: rgba(76, 81, 191, 0.18);
 }
 
 :root.theme-dark {
@@ -47,6 +53,8 @@ $global-transition: all 0.2s ease-in-out;
   --border-color: #4A5568;
   --code-background-color: #2D3748;
   --background-color: #2D3748;
+  --menu-background-color: rgba(127, 156, 245, 0.18);
+  --menu-border-color: rgba(127, 156, 245, 0.38);
 }
 
 html {
