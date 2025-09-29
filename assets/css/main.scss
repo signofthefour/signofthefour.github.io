@@ -55,10 +55,11 @@
         display: flex;
         width: 100%;
         order: 2;
+        margin-bottom: 1em;
         img {
-            width: 100%;
-            max-width: 240px;
-            height: 160px;
+            width: 160px;
+            height: 120px;
+            max-width: 100%;
             box-shadow: 3px 3px 6px #888;
             object-fit: cover;
             border-radius: 8px;
@@ -73,15 +74,18 @@
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
+            min-width: 160px;
+            max-width: 160px;
+            margin-bottom: 0;
+            margin-right: 1.25em;
             order: 1;
         }
-        
+
         .paper-box-text{
             justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
+            padding-left: 0;
+            flex: 1 1 0;
+            max-width: 100%;
             order: 2;
         }
 
@@ -110,3 +114,12 @@ h1:before, .anchor:before {
     background-color: $primary-color;
     font-size: .8em;
 }
+
+.paper-prefix {
+    display: inline-block;
+    margin-right: .4em;
+    font-weight: 600;
+    color: $primary-color;
+    white-space: nowrap;
+}
+
