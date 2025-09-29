@@ -2,6 +2,8 @@
 
 ## 🎙 Speech Synthesis
 
+_Note: C=CONFERENCE, J=JOURNAL, P=PATENT, S=IN SUBMISSION, A=PREPRINT, *=EQUAL CONTRIBUTION_
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/spade.png' alt="Placeholder cover for SPADE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -70,7 +72,7 @@ __Tan Dat Nguyen__ , [Ji-Hoon Kim](https://sites.google.com/view/jhoonkim/), [Je
 Jaehun Kim, Ji-Hoon Kim, Yeunju Choi, __Tan Dat Nguyen__, Seongkyu Mun, Joon Son Chung.
 
 <div class="paper-links">
-  <span class="btn disabled" role="button" aria-disabled="true">Demo coming soon</span>
+  <a class="btn" href="https://mm.kaist.ac.kr/projects/AdaptVC/" target="_blank" rel="noopener">Demo page</a>
   <a class="btn btn--info" href="https://arxiv.org/abs/2501.01347" target="_blank" rel="noopener" aria-label="View PDF" title="View PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
 </div>
 
@@ -170,7 +172,7 @@ Tuong Q. Lam, Dung D. Nguyen, __Dat T. Nguyen__, Han K. Lam, Thuc H. Cai, Suong 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">RIVF 2021</div><img src='images/blank.png' alt="Placeholder cover for CNN-based Vietnamese speech synthesis" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<span class="paper-prefix">[C]</span> [**CNN-based Vietnamese Speech Synthesis with Limited Dataset**]()
+<span class="paper-prefix">[National conference (Vietnam)]</span> [**CNN-based Vietnamese Speech Synthesis with Limited Dataset**]()
 
 Lam Quang Tuong, __Nguyen Tan Dat__, Lam Kha Han, Do Duc Hao.
 
@@ -180,7 +182,7 @@ Lam Quang Tuong, __Nguyen Tan Dat__, Lam Kha Han, Do Duc Hao.
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">RIVF 2021</div><img src='images/blank.png' alt="" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<span class="paper-prefix">[C]</span> [**Instanced-based Transfer Learning for Vietnamese Speech Synthesis**]()
+<span class="paper-prefix">[National conference (Vietnam)]</span> [**Instanced-based Transfer Learning for Vietnamese Speech Synthesis**]()
 
 Lam Quang Tuong, __Nguyen Tan Dat__, Do Duc Hao.
 

@@ -29,6 +29,26 @@ $global-transition: all 0.2s ease-in-out;
   }
 }
 
+:root.theme-light {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+  --text-color: #2D3748;
+  --border-color: #CBD5E0;
+  --code-background-color: #F7FAFC;
+  --background-color: #FFFFFF;
+}
+
+:root.theme-dark {
+  --primary-color: #E2E8F0;
+  --secondary-color: #2D3748;
+  --accent-color: #7F9CF5;
+  --text-color: #E2E8F0;
+  --border-color: #4A5568;
+  --code-background-color: #2D3748;
+  --background-color: #2D3748;
+}
+
 html {
   /* Sticky footer fix */
   position: relative;
@@ -40,6 +60,7 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: $base-spacing * 2; /* Adjusted for consistency */
+  background-color: var(--background-color);
   color: var(--text-color);
   font-family: $global-font-family, 'Inter', Arial, sans-serif; /* Added fallbacks */
   line-height: 1.5;

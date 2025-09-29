@@ -24,6 +24,22 @@ $base-border-radius: 8px;
   }
 }
 
+:root.theme-light {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+  --text-color: #2D3748;
+  --info-color: #3182CE;
+}
+
+:root.theme-dark {
+  --primary-color: #E2E8F0;
+  --secondary-color: #2D3748;
+  --accent-color: #7F9CF5;
+  --text-color: #E2E8F0;
+  --info-color: #90CDF4;
+}
+
 form {
   margin: 0 0 $base-spacing 0;
 

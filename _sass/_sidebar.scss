@@ -29,6 +29,24 @@ $sidebar-width: 250px;
   }
 }
 
+:root.theme-light {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+  --accent-color-dark: #3E4299;
+  --text-color: #2D3748;
+  --border-color: #CBD5E0;
+}
+
+:root.theme-dark {
+  --primary-color: #E2E8F0;
+  --secondary-color: #2D3748;
+  --accent-color: #7F9CF5;
+  --accent-color-dark: #6B89E0;
+  --text-color: #E2E8F0;
+  --border-color: #4A5568;
+}
+
 .sidebar {
   background: var(--secondary-color);
   padding: $base-spacing / 2; /* Reduced for mobile */

@@ -1,5 +1,23 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
+    <div class="masthead__controls">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="4"></line>
+          <line x1="12" y1="20" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"></line>
+          <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="4" y2="12"></line>
+          <line x1="20" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"></line>
+          <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
@@ -16,9 +34,94 @@
 </div>
 
 <script>
-  document.querySelector('.greedy-nav button').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.visible-links').classList.toggle('active');
-    document.querySelector('.hidden-links').classList.toggle('active');
-  });
+  (function() {
+    var greedyToggle = document.querySelector('.greedy-nav button');
+    var visibleLinks = document.querySelector('.greedy-nav .visible-links');
+    var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
+
+    if (greedyToggle && visibleLinks && hiddenLinks) {
+      greedyToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        visibleLinks.classList.toggle('active');
+        hiddenLinks.classList.toggle('active');
+      });
+    }
+
+    var toggleButton = document.querySelector('.theme-toggle');
+    if (!toggleButton) {
+      return;
+    }
+
+    var storageKey = 'preferred-color-scheme';
+    var root = document.documentElement;
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+
+    function setAriaPressed(isDark) {
+      toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    }
+
+    function updateMetaTheme(theme) {
+      if (themeMeta) {
+        themeMeta.setAttribute('content', theme === 'dark' ? '#2D3748' : '#ffffff');
+      }
+    }
+
+    function applyTheme(theme, persist) {
+      var normalizedTheme = theme === 'dark' ? 'dark' : 'light';
+      root.classList.remove('theme-dark', 'theme-light');
+      root.classList.add('theme-' + normalizedTheme);
+      root.setAttribute('data-theme', normalizedTheme);
+      setAriaPressed(normalizedTheme === 'dark');
+      updateMetaTheme(normalizedTheme);
+
+      if (persist) {
+        try {
+          window.localStorage.setItem(storageKey, normalizedTheme);
+        } catch (e) {
+          /* Ignore write errors */
+        }
+      }
+    }
+
+    function getStoredPreference() {
+      try {
+        return window.localStorage.getItem(storageKey);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function getSystemPreference() {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    var storedPreference = getStoredPreference();
+
+    if (storedPreference === 'dark' || storedPreference === 'light') {
+      applyTheme(storedPreference, false);
+    } else {
+      applyTheme(getSystemPreference(), false);
+    }
+
+    toggleButton.addEventListener('click', function() {
+      var isDark = root.classList.contains('theme-dark');
+      applyTheme(isDark ? 'light' : 'dark', true);
+    });
+
+    if (window.matchMedia) {
+      var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      var systemPreferenceListener = function(event) {
+        var persisted = getStoredPreference();
+        if (persisted !== 'dark' && persisted !== 'light') {
+          applyTheme(event.matches ? 'dark' : 'light', false);
+        }
+      };
+
+      if (typeof mediaQuery.addEventListener === 'function') {
+        mediaQuery.addEventListener('change', systemPreferenceListener);
+      } else if (typeof mediaQuery.addListener === 'function') {
+        mediaQuery.addListener(systemPreferenceListener);
+      }
+    }
+  })();
 </script>
