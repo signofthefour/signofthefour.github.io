@@ -20,6 +20,18 @@ $base-border-radius: 20px;
   }
 }
 
+:root.theme-light {
+  --primary-color: #2D3748;
+  --secondary-color: #EDF2F7;
+  --accent-color: #4C51BF;
+}
+
+:root.theme-dark {
+  --primary-color: #E2E8F0;
+  --secondary-color: #2D3748;
+  --accent-color: #7F9CF5;
+}
+
 #main {
   display: grid;
   grid-template-columns: 2fr 10fr;
