@@ -123,3 +123,38 @@ h1:before, .anchor:before {
     white-space: nowrap;
 }
 
+.paper-box.paper-anonymous {
+    .paper-box-image {
+        display: none;
+    }
+
+    .paper-title-link {
+        display: none;
+    }
+
+    .paper-title-placeholder {
+        display: inline-block;
+        font-style: italic;
+        margin-left: .2em;
+    }
+
+    .anonymous-placeholder {
+        font-style: italic;
+    }
+
+    &.is-revealed {
+        .paper-box-image {
+            display: flex;
+        }
+
+        .paper-title-link {
+            display: inline;
+        }
+
+        .paper-title-placeholder,
+        .anonymous-placeholder {
+            display: none;
+        }
+    }
+}
+
