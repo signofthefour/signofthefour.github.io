@@ -24,7 +24,7 @@ __Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son
 
 <span class="paper-prefix">[S.2]</span> [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://openreview.net/pdf?id=ZEPSOsi63p)
 
-The Hieu Pham*, __Tan Dat Nguyen__*, Phuong Thanh Tran, Joon Son Chung, Duc Dung Nguyen.
+The Hieu Pham *, __Tan Dat Nguyen__ *, Phuong Thanh Tran, Joon Son Chung, Duc Dung Nguyen.
 
 <div class="paper-links">
   <a class="btn" href="https://hieugiaosu.github.io/MAGE/" target="_blank" rel="noopener">Live Demo</a>
