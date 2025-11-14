@@ -35,14 +35,6 @@ The Hieu Pham *, __Tan Dat Nguyen__ *, Phuong Thanh Tran, Joon Son Chung, Duc Du
 </div>
 
 
-<div class="paper-links">
-  <a class="btn" href="https://anonymous.4open.science/w/WHYV/" target="_blank" rel="noopener">Live Demo</a>
-  <a class="btn btn--info" href="https://openreview.net/pdf?id=ZEPSOsi63p" target="_blank" rel="noopener" aria-label="View PDF" title="View PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
-</div>
-
-</div>
-</div>
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/accelerate.png' alt="Accelerating codec-based speech synthesis illustration" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
