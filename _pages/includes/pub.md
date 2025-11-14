@@ -34,16 +34,6 @@ The Hieu Pham *, __Tan Dat Nguyen__ *, Phuong Thanh Tran, Joon Son Chung, Duc Du
 </div>
 </div>
 
-<div class='paper-box paper-anonymous' id='paper-anonymous-whyv' data-anonymous-id='whyv'>
-<div class='paper-box-image'><div><div class="badge">In anonymous submission to AAAI 2025</div><img src='images/whyv2.png' alt="Placeholder cover for Language-Agnostic Target Speaker Extraction" width="100%"></div></div>
-<div class='paper-box-text' markdown="0">
-
-<span class="paper-prefix">[S.1]</span>
-<a class="paper-title-link" href="https://openreview.net/pdf?id=ZEPSOsi63p" target="_blank" rel="noopener">Language-Agnostic Target Speaker Extraction with Zero-Shot Generalization to Low-Resource Languages</a>
-<span class="paper-title-placeholder">Title hidden during anonymous submission.</span>
-
-<p>The Hieu Pham, <strong>Nguyen Tan Dat</strong>, Phuong Thanh Tran, Duc Dung Nguyen.</p>
-<p class="anonymous-placeholder">Title and cover image hidden while under anonymous review.</p>
 
 <div class="paper-links">
   <a class="btn" href="https://anonymous.4open.science/w/WHYV/" target="_blank" rel="noopener">Live Demo</a>
