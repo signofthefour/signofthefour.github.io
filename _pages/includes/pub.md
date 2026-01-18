@@ -4,7 +4,7 @@
 
 _Note: C=CONFERENCE, J=JOURNAL, P=PATENT, S=IN SUBMISSION, A=PREPRINT, *=EQUAL CONTRIBUTION_
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/spade.png' alt="Placeholder cover for SPADE" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><img src='images/spade.png' alt="Placeholder cover for SPADE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <span class="paper-prefix">[S.3]</span> [**SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS**](https://arxiv.org/abs/2509.20802v1)
@@ -19,7 +19,7 @@ __Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv 2025</div><img src='images/mage.png' alt="Placeholder cover for MAGE" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><img src='images/mage.png' alt="Placeholder cover for MAGE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <span class="paper-prefix">[S.2]</span> [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://openreview.net/pdf?id=ZEPSOsi63p)
