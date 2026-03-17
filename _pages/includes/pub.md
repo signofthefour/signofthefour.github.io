@@ -4,10 +4,26 @@
 
 _Note: C=CONFERENCE, J=JOURNAL, P=PATENT, S=IN SUBMISSION, A=PREPRINT, *=EQUAL CONTRIBUTION_
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review (Interspeech 2026)</div><img src='images/mamtra.png' alt="Placeholder cover for MamTra" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+<span class="paper-prefix">[S.1]</span> [**MamTra: A Hybrid Mamba-Transformer Backbone for Speech Synthesis**](https://arxiv.org/abs/2603.12342)
+
+__Tan Dat Nguyen__, Sangmin Bae, Joon Son Chung, Ji-Hoon Kim.
+
+<div class="paper-links">
+  <a class="btn" href="https://mamtratts.github.io" target="_blank" rel="noopener">Project page</a>
+  <a class="btn btn--info" href="https://arxiv.org/abs/2603.12342" target="_blank" rel="noopener" aria-label="View PDF" title="View PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
+  <a class="btn btn--success" href="https://anonymous.4open.science/r/anonymous1-6FBB/" target="_blank" rel="noopener" aria-label="View source on GitHub" title="View source on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+</div>
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><img src='images/spade.png' alt="Placeholder cover for SPADE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<span class="paper-prefix">[S.3]</span> [**SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS**](https://arxiv.org/abs/2509.20802v1)
+<span class="paper-prefix">[C.9]</span> [**SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS**](https://arxiv.org/abs/2509.20802v1)
 
 __Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son Chung.
 
@@ -22,7 +38,7 @@ __Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><img src='images/mage.png' alt="Placeholder cover for MAGE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<span class="paper-prefix">[S.2]</span> [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://openreview.net/pdf?id=ZEPSOsi63p)
+<span class="paper-prefix">[C.8]</span> [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://openreview.net/pdf?id=ZEPSOsi63p)
 
 The Hieu Pham *, __Tan Dat Nguyen__ *, Phuong Thanh Tran, Joon Son Chung, Duc Dung Nguyen.
 
@@ -33,7 +49,6 @@ The Hieu Pham *, __Tan Dat Nguyen__ *, Phuong Thanh Tran, Joon Son Chung, Duc Du
 
 </div>
 </div>
-
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/accelerate.png' alt="Accelerating codec-based speech synthesis illustration" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
