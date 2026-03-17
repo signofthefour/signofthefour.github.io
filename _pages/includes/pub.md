@@ -25,7 +25,7 @@ __Tan Dat Nguyen__, Sangmin Bae, Joon Son Chung, Ji-Hoon Kim.
 
 <span class="paper-prefix">[C.9]</span> [**SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS**](https://arxiv.org/abs/2509.20802v1)
 
-__Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son Chung.
+__Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son Chung. (<font color="red"> Oral Presentation </font>)
 
 <div class="paper-links">
   <a class="btn" href="https://mm.kaist.ac.kr/projects/SPADE/" target="_blank" rel="noopener">Demo page</a>
@@ -38,7 +38,7 @@ __Tan Dat Nguyen__, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><img src='images/mage.png' alt="Placeholder cover for MAGE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<span class="paper-prefix">[C.8]</span> [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://openreview.net/pdf?id=ZEPSOsi63p)
+<span class="paper-prefix">[C.8]</span> [**MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model**](https://arxiv.org/abs/2509.19881)
 
 The Hieu Pham *, __Tan Dat Nguyen__ *, Phuong Thanh Tran, Joon Son Chung, Duc Dung Nguyen.
 
