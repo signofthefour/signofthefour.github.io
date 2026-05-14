@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tan Dat Nguyen — PhD Student at KAIST</title>
+  <meta name="description" content="Tan Dat Nguyen — PhD student at KAIST MMAI Lab, focusing on speech and audio synthesis.">
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+    .dark ::-webkit-scrollbar-thumb { background: #4b5563; }
+    .nav-link.active { color: #3b82f6; }
+    .dark .nav-link.active { color: #60a5fa; }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased transition-colors duration-200">
+
+  <!-- Sticky header -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800/60">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
+      <span class="font-semibold text-sm text-gray-900 dark:text-gray-100 tracking-tight">Tan Dat Nguyen</span>
+
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="#about"        class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">About</a>
+        <a href="#news"         class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">News</a>
+        <a href="#publications" class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Publications</a>
+        <a href="#education"    class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Education</a>
+        <a href="#experience"   class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Experience</a>
+        <a href="#honors"       class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Honors</a>
+      </nav>
+
+      <button id="theme-toggle"
+        class="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        aria-label="Toggle dark mode">
+        <i class="fas fa-sun dark:hidden text-sm"></i>
+        <i class="fas fa-moon hidden dark:inline text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page body -->
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 py-12 lg:flex lg:gap-14 xl:gap-20">
+
+    <!-- Sidebar -->
+    <aside class="lg:w-52 xl:w-60 lg:shrink-0 mb-12 lg:mb-0">
+      <div class="lg:sticky lg:top-24 space-y-6">
+
+        <!-- Avatar + identity -->
+        <div class="flex items-center gap-5 lg:block lg:space-y-4">
+          <img src="images/avatar.jpg" alt="Tan Dat Nguyen"
+               class="w-20 h-20 lg:w-full lg:h-auto rounded-2xl object-cover shadow-sm border border-gray-100 dark:border-gray-800">
+          <div>
+            <h1 class="font-semibold text-gray-900 dark:text-gray-100">Tan Dat Nguyen</h1>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">PhD Student</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">KAIST · MMAI Lab</p>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-center gap-2.5 text-gray-500 dark:text-gray-400">
+            <i class="fas fa-map-marker-alt w-4 text-center text-xs"></i>
+            <span>Daejeon, Korea</span>
+          </li>
+          <li>
+            <a href="mailto:tandat@mmai.io" class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <i class="fas fa-envelope w-4 text-center text-xs"></i>Email
+            </a>
+          </li>
+          <li>
+            <a href="https://soapy-cave-11d.notion.site/CV-Tan-Dat-Nguyen-KAIST-27a367388c7680219580cef443b8eec4" target="_blank" rel="noopener"
+               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <i class="fas fa-file-alt w-4 text-center text-xs"></i>CV
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=4Yr_icEAAAAJ&hl" target="_blank" rel="noopener"
+               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <i class="fas fa-graduation-cap w-4 text-center text-xs"></i>Google Scholar
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/signofthefour" target="_blank" rel="noopener"
+               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <i class="fab fa-github w-4 text-center text-xs"></i>GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/dat-nguyen-017824174" target="_blank" rel="noopener"
+               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <i class="fab fa-linkedin w-4 text-center text-xs"></i>LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="min-w-0 flex-1 space-y-16">
+
+      <!-- About -->
+      <section id="about">
+        <div class="space-y-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p>
+            I am a PhD student at <a href="https://ee.kaist.ac.kr/en/" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">KAIST EE</a>,
+            working at <a href="https://mmai.io/" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">Multimodal AI Lab</a>
+            under the supervision of <a href="https://mmai.io/joon/" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">Prof. Joon Son Chung</a>
+            since March 2023.
+            <a href="https://soapy-cave-11d.notion.site/CV-Tan-Dat-Nguyen-KAIST-27a367388c7680219580cef443b8eec4" target="_blank" rel="noopener"
+               class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">[Academic CV]</a>
+          </p>
+          <p>
+            My research focuses on <strong class="text-gray-900 dark:text-gray-100 font-medium">speech and audio synthesis</strong>
+            and multimodal generative models. I'm open to academic collaborations — feel free to reach out at
+            <a href="mailto:tandat@mmai.io" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">tandat@mmai.io</a>.
+          </p>
+          <p>
+            In 2022, I graduated from the
+            <a href="https://cse.hcmut.edu.vn/en" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">Department of Computer Science and Engineering</a>,
+            <a href="https://oisp.hcmut.edu.vn/en/" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">Ho Chi Minh University of Technology – VNU</a>,
+            advised by <a href="https://scholar.google.com/citations?user=xV7uHJgAAAAJ&hl=en" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">Dr. Duc Dung Nguyen</a>
+            at <a href="https://ml4uhcmut.github.io/" class="text-blue-500 dark:text-blue-400 hover:underline underline-offset-2">ML4U-AITech Lab</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section id="news">
+        <h2 class="text-lg font-semibold mb-5 text-gray-900 dark:text-gray-100">News</h2>
+        <ul class="space-y-3">
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-20 text-gray-400 dark:text-gray-500">Dec 2025</time>
+            <span class="text-gray-700 dark:text-gray-300">Two papers accepted at <span class="font-medium text-gray-900 dark:text-gray-100">ICASSP 2026</span></span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-20 text-gray-400 dark:text-gray-500">Dec 2024</time>
+            <span class="text-gray-700 dark:text-gray-300">Three papers accepted at <span class="font-medium text-gray-900 dark:text-gray-100">ICASSP 2025</span></span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-20 text-gray-400 dark:text-gray-500">Nov 2023</time>
+            <span class="text-gray-700 dark:text-gray-300">One paper accepted at <span class="font-medium text-gray-900 dark:text-gray-100">ICASSP 2024</span></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">Publications</h2>
+        <p class="text-xs text-gray-400 dark:text-gray-500 mb-7">
+          C = Conference &nbsp;·&nbsp; A = Preprint &nbsp;·&nbsp; S = In Submission &nbsp;·&nbsp; * = Equal contribution
+        </p>
+
+        <div class="space-y-8">
+
+          <!-- MamTra -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/mamtra.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Under Review</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[S.1]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2603.12342" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  MamTra: A Hybrid Mamba-Transformer Backbone for Speech Synthesis
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>, Sangmin Bae, Joon Son Chung, Ji-Hoon Kim
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://mamtratts.github.io" target="_blank" rel="noopener" class="pill">Project</a>
+                <a href="https://arxiv.org/abs/2603.12342" target="_blank" rel="noopener" class="pill">arXiv</a>
+                <a href="https://anonymous.4open.science/r/anonymous1-6FBB/" target="_blank" rel="noopener" class="pill">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SPADE -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/spade.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP 2026</span>
+                <span class="badge bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-300">Oral</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.9]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2509.20802v1" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>, Jaehun Kim, Ji-Hoon Kim, Shukjae Choi, Youshin Lim, Joon Son Chung
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://mm.kaist.ac.kr/projects/SPADE/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://arxiv.org/abs/2509.20802v1" target="_blank" rel="noopener" class="pill">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MAGE -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/mage.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP 2026</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.8]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2509.19881" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                The Hieu Pham*, <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>*, Phuong Thanh Tran, Joon Son Chung, Duc Dung Nguyen
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://hieugiaosu.github.io/MAGE/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://openreview.net/pdf?id=ZEPSOsi63p" target="_blank" rel="noopener" class="pill">PDF</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Accelerating Codec -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/accelerate.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP 2025</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.7]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2410.13839" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  Accelerating Codec-based Speech Synthesis with Multi-Token Prediction and Speculative Decoding
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>, Ji-Hoon Kim, Jeongsoo Choi, Shukjae Choi, Jinseok Park, Younglo Lee, Joon Son Chung
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://mm.kaist.ac.kr/projects/mtp/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://arxiv.org/abs/2410.13839" target="_blank" rel="noopener" class="pill">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AdaptVC -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/adaptvc.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP 2025</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.6]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2501.01347" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  AdaptVC: High Quality Voice Conversion with Adaptive Learning
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                Jaehun Kim, Ji-Hoon Kim, Yeunju Choi, <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>, Seongkyu Mun, Joon Son Chung
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://mm.kaist.ac.kr/projects/AdaptVC/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://arxiv.org/abs/2501.01347" target="_blank" rel="noopener" class="pill">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- VoiceDiT -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/voicedit.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP 2025</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.5]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2412.19259" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  VoiceDiT: Dual-Condition Diffusion Transformer for Environment-Aware Speech Synthesis
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                Jaemin Jung*, Junseok Ahn*, Chaeyoung Jung, <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>, Youngjoon Jang, Joon Son Chung
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://mm.kaist.ac.kr/projects/voicedit/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://arxiv.org/abs/2412.19259" target="_blank" rel="noopener" class="pill">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FreGrad -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/500x300.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP 2024</span>
+                <span class="badge bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-300">Oral</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.4]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2401.10032" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  FreGrad: Lightweight and Fast Frequency-Aware Diffusion Vocoder
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>*, Ji-Hoon Kim*, Youngjoon Jang, Jaehun Kim, Joon Son Chung
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://mm.kaist.ac.kr/projects/FreGrad/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://arxiv.org/abs/2401.10032" target="_blank" rel="noopener" class="pill">arXiv</a>
+                <a href="https://github.com/kaistmm/fregrad" target="_blank" rel="noopener" class="pill">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WHYV -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/whyv.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300">Preprint 2024</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[A.1]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://arxiv.org/abs/2410.00527v1" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  Wanna Hear Your Voice: Adaptive, Effective, and Language-Agnostic Approach in Voice Extraction
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                The Hieu Pham, <strong class="text-gray-700 dark:text-gray-300 font-medium">Nguyen Tan Dat</strong>, Phuong Thanh Tran, Duc Dung Nguyen
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://anonymous.4open.science/w/WHYV/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://arxiv.org/abs/2410.00527v1" target="_blank" rel="noopener" class="pill">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Calib-StyleSpeech -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/CalibStyelSpeech.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">ICABDE 2021</span>
+                <span class="badge bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-300">Oral</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.2]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-97610-1_6" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  Calib-StyleSpeech: A Zero-shot Approach in Voice Cloning of High Adaptive Text To Speech System with Imbalanced Dataset
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                <strong class="text-gray-700 dark:text-gray-300 font-medium">Nguyen Tan Dat</strong>, Lam Quang Tuong, Nguyen Duc Dung
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://signofthefour.github.io/calib-stylespeech-demo/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-97610-1_6" target="_blank" rel="noopener" class="pill">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bahnar TTS -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/bahnar.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">NAFOSTED 2021</span>
+                <span class="badge bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-300">Oral</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.3]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://ieeexplore.ieee.org/document/10013451" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  A Linguistic-based Transfer Learning Approach for Low-resource Bahnar Text-to-Speech
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                <strong class="text-gray-700 dark:text-gray-300 font-medium">Tan Dat Nguyen</strong>, Quang Tuong Lam, Duc Hao Do, Huu Thuc Cai, Hoang Suong Nguyen, Thanh Hung Vo, Duc Dung Nguyen
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://signofthefour.github.io/bahnar_demo/" target="_blank" rel="noopener" class="pill">Demo</a>
+                <a href="https://ieeexplore.ieee.org/document/10013451" target="_blank" rel="noopener" class="pill">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Instance-Based TL -->
+          <article class="flex gap-4 sm:gap-5">
+            <img src="images/FICC2022.png" alt="" aria-hidden="true"
+                 class="w-24 sm:w-28 h-16 sm:h-20 object-cover rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                <span class="badge bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">FICC 2022</span>
+                <span class="text-xs text-gray-400 dark:text-gray-600">[C.1]</span>
+              </div>
+              <h3 class="text-sm font-semibold leading-snug">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-98015-3_10" class="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+                  Instance-Based Transfer Learning Approach for Vietnamese Speech Synthesis with Very Low Resource
+                </a>
+              </h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                Tuong Q. Lam, Dung D. Nguyen, <strong class="text-gray-700 dark:text-gray-300 font-medium">Dat T. Nguyen</strong>, Han K. Lam, Thuc H. Cai, Suong N. Hoang, Hao D. Do
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-98015-3_10" target="_blank" rel="noopener" class="pill">Paper</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2 class="text-lg font-semibold mb-5 text-gray-900 dark:text-gray-100">Education</h2>
+        <div class="space-y-5">
+
+          <div class="flex gap-5">
+            <div class="shrink-0 w-24 text-xs text-gray-400 dark:text-gray-500 leading-relaxed pt-0.5">Mar 2025 –<br>Present</div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-100">PhD in Electrical Engineering</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Korea Advanced Institute of Science and Technology (KAIST), Daejeon</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="shrink-0 w-24 text-xs text-gray-400 dark:text-gray-500 leading-relaxed pt-0.5">Mar 2023 –<br>Mar 2025</div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-100">MS in Electrical Engineering</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Korea Advanced Institute of Science and Technology (KAIST), Daejeon &nbsp;·&nbsp; GPA 3.75</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="shrink-0 w-24 text-xs text-gray-400 dark:text-gray-500 leading-relaxed pt-0.5">Oct 2018 –<br>Oct 2022</div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-100">BS in Computer Science</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Ho Chi Minh University of Technology – Vietnam National University &nbsp;·&nbsp; Thesis 9.8/10</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="shrink-0 w-24 text-xs text-gray-400 dark:text-gray-500 leading-relaxed pt-0.5">Aug 2015 –<br>Aug 2018</div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-100">Nguyen Chi Thanh High School for Gifted</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Dak Nong, Vietnam</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section id="experience">
+        <h2 class="text-lg font-semibold mb-5 text-gray-900 dark:text-gray-100">Experience</h2>
+        <div class="space-y-5">
+
+          <div class="flex gap-5">
+            <div class="shrink-0 w-24 text-xs text-gray-400 dark:text-gray-500 leading-relaxed pt-0.5">Oct 2021 –<br>Feb 2023</div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-100">OLLI Technology Corp.</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Vietnam</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="shrink-0 w-24 text-xs text-gray-400 dark:text-gray-500 leading-relaxed pt-0.5">Jun 2021 –<br>Sep 2021</div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-100">OLLI Technology Corp. — Intern</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Vietnam</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Honors & Awards -->
+      <section id="honors">
+        <h2 class="text-lg font-semibold mb-5 text-gray-900 dark:text-gray-100">Honors & Awards</h2>
+        <ul class="space-y-2.5">
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2023</time>
+            <span class="text-gray-700 dark:text-gray-300">KAIST Scholarship (full tuition and fees)</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2022</time>
+            <span class="text-gray-700 dark:text-gray-300">Certificate of Merit — high achievements in academic competitions and scientific research</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2022</time>
+            <span class="text-gray-700 dark:text-gray-300">First prize — poster competition, Technical Festival 2021–2022</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2018</time>
+            <span class="text-gray-700 dark:text-gray-300">Vallet Scholarships</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2018</time>
+            <span class="text-gray-700 dark:text-gray-300">Third prize — Vietnam Mathematical Olympiad (VMO 2018)</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2017</time>
+            <span class="text-gray-700 dark:text-gray-300">Silver medal — Mathematical Olympiad 30/04</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2016</time>
+            <span class="text-gray-700 dark:text-gray-300">Bronze medal — Mathematical Olympiad 30/04</span>
+          </li>
+          <li class="flex gap-5 text-sm">
+            <time class="shrink-0 w-10 text-gray-400 dark:text-gray-500">2016</time>
+            <span class="text-gray-700 dark:text-gray-300">Third prize — Hanoi Open Mathematical Olympiad</span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-gray-100 dark:border-gray-800/60">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 py-7 text-center text-xs text-gray-400 dark:text-gray-600">
+      © 2025 Tan Dat Nguyen
+    </div>
+  </footer>
+
+  <!-- Reusable component styles (injected via Tailwind's @apply equivalent) -->
+  <style>
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      border: 1px solid;
+      border-color: #e5e7eb;
+      color: #4b5563;
+      transition: border-color 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .pill:hover { border-color: #3b82f6; color: #3b82f6; }
+    .dark .pill { border-color: #374151; color: #9ca3af; }
+    .dark .pill:hover { border-color: #60a5fa; color: #60a5fa; }
+  </style>
+
+  <script>
+    // Dark mode toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
