@@ -55,6 +55,7 @@
         <a href="#about"        class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">About</a>
         <a href="#news"         class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">News</a>
         <a href="#publications" class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Publications</a>
+        <a href="#projects"     class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Projects</a>
         <a href="#education"    class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Education</a>
         <a href="#experience"   class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Experience</a>
         <a href="#honors"       class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Honors</a>
@@ -537,6 +538,42 @@
         </div>
       </section>
 
+      <!-- Selected Projects -->
+      <section id="projects">
+        <h2 class="text-lg font-semibold mb-5 text-gray-900 dark:text-gray-100">Selected Projects</h2>
+        <div class="flex flex-wrap gap-3">
+
+          <!-- FreGrad -->
+          <div class="flex flex-col gap-1.5 px-4 py-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/70 dark:bg-gray-900/50 min-w-[170px]">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">FreGrad</span>
+              <span class="flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500">
+                <i class="fas fa-star text-amber-400 text-[10px]"></i>
+                <span id="fregrad-stars">—</span>
+              </span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 leading-snug">Lightweight Diffusion Vocoder</p>
+            <a href="https://github.com/kaistmm/fregrad" target="_blank" rel="noopener"
+               class="text-xs text-blue-500 dark:text-blue-400 hover:underline underline-offset-2 mt-0.5">
+              kaistmm/fregrad
+            </a>
+          </div>
+
+          <!-- SPADE -->
+          <div class="flex flex-col gap-1.5 px-4 py-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/70 dark:bg-gray-900/50 min-w-[170px]">
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">SPADE</span>
+            <p class="text-xs text-gray-500 dark:text-gray-400 leading-snug">Structured Pruning for LLM-TTS</p>
+          </div>
+
+          <!-- MamTra -->
+          <div class="flex flex-col gap-1.5 px-4 py-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/70 dark:bg-gray-900/50 min-w-[170px]">
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">MamTra</span>
+            <p class="text-xs text-gray-500 dark:text-gray-400 leading-snug">Hybrid Mamba-Transformer TTS</p>
+          </div>
+
+        </div>
+      </section>
+
       <!-- Education -->
       <section id="education">
         <h2 class="text-lg font-semibold mb-5 text-gray-900 dark:text-gray-100">Education</h2>
@@ -701,6 +738,20 @@
       });
     }, { rootMargin: '-25% 0px -65% 0px' });
     sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    (async function fetchProjectStars() {
+      try {
+        const [r1, r2] = await Promise.all([
+          fetch('https://api.github.com/repos/kaistmm/fregrad').then(r => r.json()),
+          fetch('https://api.github.com/repos/signofthefour/fregrad').then(r => r.json())
+        ]);
+        const total = (r1.stargazers_count || 0) + (r2.stargazers_count || 0);
+        const el = document.getElementById('fregrad-stars');
+        if (el) el.textContent = total;
+      } catch (_) {}
+    })();
   </script>
 
 </body>
