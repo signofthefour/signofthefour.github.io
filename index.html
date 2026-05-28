@@ -79,51 +79,47 @@
 
         <!-- Avatar + identity -->
         <div class="flex items-center gap-5 lg:block lg:space-y-4">
-          <img src="images/avatar.jpg" alt="Tan Dat Nguyen"
-               class="w-20 h-20 lg:w-full lg:h-auto rounded-2xl object-cover shadow-sm border border-gray-100 dark:border-gray-800">
-          <div>
+          <div class="lg:flex lg:justify-center">
+            <img src="images/IMG_3595.JPG" alt="Tan Dat Nguyen"
+                 class="w-20 h-20 lg:w-36 lg:h-36 rounded-full object-cover object-top shadow-sm
+                        ring-2 ring-white dark:ring-gray-950 ring-offset-2 ring-offset-white dark:ring-offset-gray-950">
+          </div>
+          <div class="lg:text-center">
             <h1 class="font-semibold text-gray-900 dark:text-gray-100">Tan Dat Nguyen</h1>
             <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">PhD Student</p>
             <p class="text-sm text-gray-500 dark:text-gray-400">KAIST · MMAI Lab</p>
+            <div class="flex flex-wrap gap-1 mt-2.5 lg:justify-center">
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 font-medium whitespace-nowrap">Speech Synthesis</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300 font-medium whitespace-nowrap">Efficient AI</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 font-medium whitespace-nowrap">LLM-TTS</span>
+            </div>
           </div>
         </div>
 
         <!-- Links -->
-        <ul class="space-y-2 text-sm">
-          <li class="flex items-center gap-2.5 text-gray-500 dark:text-gray-400">
-            <i class="fas fa-map-marker-alt w-4 text-center text-xs"></i>
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
+            <i class="fas fa-map-marker-alt w-3.5 text-center"></i>
             <span>Daejeon, Korea</span>
-          </li>
-          <li>
-            <a href="mailto:tandat@mmai.io" class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-              <i class="fas fa-envelope w-4 text-center text-xs"></i>Email
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <a href="mailto:tandat@mmai.io" title="Email" class="icon-btn">
+              <i class="fas fa-envelope"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://soapy-cave-11d.notion.site/CV-Tan-Dat-Nguyen-KAIST-27a367388c7680219580cef443b8eec4" target="_blank" rel="noopener"
-               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-              <i class="fas fa-file-alt w-4 text-center text-xs"></i>CV
+            <a href="https://soapy-cave-11d.notion.site/CV-Tan-Dat-Nguyen-KAIST-27a367388c7680219580cef443b8eec4" target="_blank" rel="noopener" title="Curriculum Vitae" class="icon-btn">
+              <i class="fas fa-file-alt"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?user=4Yr_icEAAAAJ&hl" target="_blank" rel="noopener"
-               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-              <i class="fas fa-graduation-cap w-4 text-center text-xs"></i>Google Scholar
+            <a href="https://scholar.google.com/citations?user=4Yr_icEAAAAJ&hl" target="_blank" rel="noopener" title="Google Scholar" class="icon-btn">
+              <i class="fas fa-graduation-cap"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://github.com/signofthefour" target="_blank" rel="noopener"
-               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-              <i class="fab fa-github w-4 text-center text-xs"></i>GitHub
+            <a href="https://github.com/signofthefour" target="_blank" rel="noopener" title="GitHub" class="icon-btn">
+              <i class="fab fa-github"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/dat-nguyen-017824174" target="_blank" rel="noopener"
-               class="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-              <i class="fab fa-linkedin w-4 text-center text-xs"></i>LinkedIn
+            <a href="https://www.linkedin.com/in/dat-nguyen-017824174" target="_blank" rel="noopener" title="LinkedIn" class="icon-btn">
+              <i class="fab fa-linkedin"></i>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </aside>
 
@@ -209,7 +205,7 @@
             <div class="space-y-8">
 
           <!-- WAND -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/wand.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -232,7 +228,7 @@
           </article>
 
           <!-- MamTra -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/mamtra.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -257,7 +253,7 @@
           </article>
 
           <!-- SPADE -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/spade.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -282,7 +278,7 @@
           </article>
 
           <!-- MAGE -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/mage.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -314,7 +310,7 @@
             <div class="space-y-8">
 
           <!-- Accelerating Codec -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/accelerate.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -338,7 +334,7 @@
           </article>
 
           <!-- AdaptVC -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/adaptvc.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -362,7 +358,7 @@
           </article>
 
           <!-- VoiceDiT -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/voicedit.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -394,7 +390,7 @@
             <div class="space-y-8">
 
           <!-- FreGrad -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/500x300.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -420,7 +416,7 @@
           </article>
 
           <!-- WHYV -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/whyv.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -452,7 +448,7 @@
             <div class="space-y-8">
 
           <!-- Instance-Based TL -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/FICC2022.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -483,7 +479,7 @@
             <div class="space-y-8">
 
           <!-- Calib-StyleSpeech -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/CalibStyelSpeech.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -508,7 +504,7 @@
           </article>
 
           <!-- Bahnar TTS -->
-          <article class="flex gap-4 sm:gap-5">
+          <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
             <img src="images/bahnar.png" alt="" aria-hidden="true"
                  class="w-36 sm:w-48 aspect-video object-contain rounded-xl shrink-0 bg-gray-100 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800">
             <div class="min-w-0">
@@ -687,7 +683,7 @@
   <!-- Footer -->
   <footer class="mt-20 border-t border-gray-100 dark:border-gray-800/60">
     <div class="max-w-5xl mx-auto px-5 sm:px-8 py-7 text-center text-xs text-gray-400 dark:text-gray-600">
-      © 2025 Tan Dat Nguyen
+      © 2026 Tan Dat Nguyen
     </div>
   </footer>
 
@@ -716,6 +712,31 @@
     .pill:hover { border-color: #3b82f6; color: #3b82f6; }
     .dark .pill { border-color: #374151; color: #9ca3af; }
     .dark .pill:hover { border-color: #60a5fa; color: #60a5fa; }
+    .icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: #f9fafb;
+      color: #6b7280;
+      font-size: 0.8rem;
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .icon-btn:hover { background: #eff6ff; color: #3b82f6; }
+    .dark .icon-btn { background: #1f2937; color: #9ca3af; }
+    .dark .icon-btn:hover { background: rgba(30,58,138,0.25); color: #60a5fa; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 
   <script>
@@ -738,6 +759,18 @@
       });
     }, { rootMargin: '-25% 0px -65% 0px' });
     sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 
   <script>
