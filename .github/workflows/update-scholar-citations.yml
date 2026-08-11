@@ -1,0 +1,73 @@
+name: Update Google Scholar citations
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Fetch Google Scholar citation count
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.parse
+          import urllib.request
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          api_key = os.environ.get("SERPAPI_KEY")
+          if not api_key:
+              raise SystemExit("Missing SERPAPI_KEY repository secret")
+
+          query = urllib.parse.urlencode({
+              "engine": "google_scholar_author",
+              "author_id": "4Yr_icEAAAAJ",
+              "hl": "en",
+              "api_key": api_key,
+          })
+          request = urllib.request.Request(
+              f"https://serpapi.com/search.json?{query}",
+              headers={"User-Agent": "signofthefour.github.io citation updater"},
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              result = json.load(response)
+
+          if result.get("error"):
+              raise SystemExit(f"SerpAPI error: {result['error']}")
+
+          try:
+              citations = int(result["cited_by"]["table"][0]["citations"]["all"])
+          except (KeyError, IndexError, TypeError, ValueError) as error:
+              raise SystemExit("Google Scholar citation count missing from response") from error
+
+          payload = {
+              "citations": citations,
+              "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+              "source": "Google Scholar",
+          }
+          Path("data").mkdir(exist_ok=True)
+          Path("data/scholar.json").write_text(
+              json.dumps(payload, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Commit updated count
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scholar.json
+          git diff --cached --quiet || git commit -m "Update Google Scholar citation count"
+          git push
