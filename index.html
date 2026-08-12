@@ -370,6 +370,9 @@
           <div class="w-px h-3.5 bg-gray-200 dark:bg-gray-700 mx-0.5"></div>
           <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP ×6</span>
           <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">Interspeech ×2</span>
+          <span class="badge bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">FICC ×1</span>
+          <span class="badge bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">ICABDE ×1</span>
+          <span class="badge bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">NAFOSTED ×1</span>
           <span class="badge bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300">Preprint ×1</span>
         </div>
 
@@ -937,6 +940,54 @@
     .pill:hover { border-color: var(--brick) !important; color: var(--brick) !important; }
     article { background: transparent !important; border-color: var(--line) !important; border-radius: 0 !important; box-shadow: none !important; }
     #publications article { border-radius: 14px !important; }
+    .paper-visual {
+      position: relative;
+      width: 11rem;
+      aspect-ratio: 16 / 9;
+      flex: 0 0 auto;
+      overflow: hidden;
+      isolation: isolate;
+      border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+      border-radius: 10px;
+      background: var(--paper-deep);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, white 16%, transparent);
+    }
+    .paper-visual::before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      inset: -18px;
+      background-image: var(--paper-art);
+      background-position: center;
+      background-size: cover;
+      filter: blur(14px) saturate(.72);
+      opacity: .34;
+      transform: scale(1.12);
+    }
+    .paper-visual::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: color-mix(in srgb, var(--paper) 56%, transparent);
+    }
+    .paper-visual img {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 3px;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 3px rgba(36, 31, 25, .16));
+      transition: transform .24s ease, filter .24s ease;
+    }
+    #publications article:hover .paper-visual img {
+      transform: scale(1.025);
+      filter: drop-shadow(0 3px 5px rgba(36, 31, 25, .22));
+    }
+    .dark .paper-visual::before { opacity: .25; }
+    @media (min-width: 640px) { .paper-visual { width: 18rem; } }
     article.reveal:hover { border-color: var(--brick) !important; }
     main p, main li, main time, main span { color: var(--ink); }
     footer { max-width: 1000px; margin: 6rem auto 0 !important; border-color: var(--line) !important; color: var(--muted); }
@@ -967,6 +1018,15 @@
   </style>
 
   <script>
+    // Give mixed-ratio publication artwork a shared frame without cropping it.
+    document.querySelectorAll('#publications article > img').forEach(img => {
+      const frame = document.createElement('figure');
+      frame.className = 'paper-visual';
+      frame.style.setProperty('--paper-art', `url("${img.getAttribute('src')}")`);
+      img.before(frame);
+      frame.append(img);
+    });
+
     // Citation total is refreshed from Google Scholar by a scheduled GitHub Action.
     fetch('data/scholar.json', { cache: 'no-store' })
       .then(response => response.ok ? response.json() : Promise.reject())
