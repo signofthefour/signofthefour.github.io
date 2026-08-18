@@ -239,44 +239,56 @@
         </div>
         <ol class="career-timeline">
           <li>
+            <div class="career-moment">
+              <time datetime="2021">2021</time>
+              <strong>Research begins</strong>
+              <span class="career-detail">OLLI intern</span>
+            </div>
             <span class="career-dot" aria-hidden="true"></span>
-            <time datetime="2021">2021</time>
-            <strong>Research begins</strong>
-            <span class="career-detail">OLLI intern</span>
             <div class="career-papers"><a href="#publications">Calib-StyleSpeech</a><a href="#publications">Bahnar TTS</a></div>
           </li>
           <li>
+            <div class="career-moment">
+              <time datetime="2022">2022</time>
+              <strong>Bachelor’s graduation</strong>
+              <span class="career-detail">Computer Science · HCMUT</span>
+            </div>
             <span class="career-dot" aria-hidden="true"></span>
-            <time datetime="2022">2022</time>
-            <strong>BSc · HCMUT</strong>
-            <span class="career-detail">OLLI researcher</span>
             <div class="career-papers"><a href="#publications">IBTL-TTS</a></div>
           </li>
           <li>
+            <div class="career-moment">
+              <time datetime="2023">2023</time>
+              <strong>Joined MMAI · KAIST</strong>
+              <span class="career-detail">MSc · Electrical Engineering</span>
+            </div>
             <span class="career-dot" aria-hidden="true"></span>
-            <time datetime="2023">2023</time>
-            <strong>MSc · KAIST</strong>
-            <span class="career-detail">MMAI Lab</span>
           </li>
           <li>
+            <div class="career-moment">
+              <time datetime="2024">2024</time>
+              <strong>First ICASSP</strong>
+              <span class="career-detail">Oral paper</span>
+            </div>
             <span class="career-dot" aria-hidden="true"></span>
-            <time datetime="2024">2024</time>
-            <strong>First ICASSP</strong>
-            <span class="career-detail">Oral paper</span>
             <div class="career-papers"><a href="#publications">FreGrad</a><a href="#publications">WHYV</a></div>
           </li>
           <li>
-            <span class="career-dot" aria-hidden="true"></span>
-            <time datetime="2025">2025</time>
-            <strong>PhD · KAIST</strong>
-            <span class="career-detail">Speech &amp; dialogue</span>
+            <div class="career-moment">
+              <time datetime="2025">2025</time>
+              <strong>MSc → PhD</strong>
+              <span class="career-detail">Continued at MMAI · KAIST</span>
+            </div>
+            <span class="career-dot is-transition-dot" aria-hidden="true"></span>
             <div class="career-papers"><a href="#publications">MTP</a><a href="#publications">AdaptVC</a><a href="#publications">VoiceDiT</a></div>
           </li>
           <li class="is-current">
+            <div class="career-moment">
+              <time datetime="2026">2026</time>
+              <strong>Efficient speech AI</strong>
+              <span class="career-detail">Current focus</span>
+            </div>
             <span class="career-dot" aria-hidden="true"></span>
-            <time datetime="2026">2026</time>
-            <strong>Efficient speech AI</strong>
-            <span class="career-detail">Current focus</span>
             <div class="career-papers"><a href="#publications">WAND</a><a href="#publications">MamTra</a><a href="#publications">SPADE</a><a href="#publications">MAGE</a></div>
           </li>
         </ol>
@@ -1060,14 +1072,20 @@
     .career-legend { display: flex; align-items: center; gap: .4rem; margin: 0 0 .7rem; color: var(--muted); font-size: .6rem; }
     .career-legend span { width: .42rem; height: .42rem; border-radius: 50%; background: var(--brick); }
     .career-timeline { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
-    .career-timeline::before { content: ''; position: absolute; top: .39rem; left: .5rem; right: .5rem; height: 1px; background: var(--line); }
-    .career-timeline li { position: relative; min-width: 0; padding: 1.4rem .75rem 0 0; }
-    .career-dot { position: absolute; z-index: 1; top: 0; left: 0; width: .82rem; height: .82rem; border: 3px solid var(--paper); border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 1px var(--line); }
-    .career-timeline .is-current .career-dot { background: var(--brick); box-shadow: 0 0 0 1px var(--brick), 0 0 0 5px color-mix(in srgb, var(--brick) 10%, transparent); }
+    .career-timeline::before { content: ''; position: absolute; top: 6.02rem; left: .5rem; right: .5rem; height: 1px; background: var(--line); }
+    .career-timeline li { position: relative; min-width: 0; padding-right: .75rem; }
+    .career-moment { min-height: 5.65rem; }
+    .career-dot { position: relative; z-index: 1; display: block; width: .82rem; height: .82rem; border: 3px solid var(--paper); border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 1px var(--line); }
+    .career-timeline .is-current .career-dot { background: var(--brick); box-shadow: 0 0 0 1px var(--brick), 0 0 0 5px color-mix(in srgb, var(--brick) 10%, transparent); animation: career-current-pulse 1.8s ease-in-out infinite; }
+    @keyframes career-current-pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 1px var(--brick), 0 0 0 4px color-mix(in srgb, var(--brick) 10%, transparent); }
+      50% { opacity: .48; box-shadow: 0 0 0 1px var(--brick), 0 0 0 8px color-mix(in srgb, var(--brick) 4%, transparent); }
+    }
     .career-timeline time { display: block; margin-bottom: .45rem; color: var(--brick); font-family: 'DM Mono', monospace; font-size: .68rem; }
+    .career-dot.is-transition-dot { background: linear-gradient(90deg, var(--muted) 0 46%, var(--brick) 54% 100%); box-shadow: 0 0 0 1px color-mix(in srgb, var(--brick) 55%, var(--line)); }
     .career-timeline strong { display: block; color: var(--ink); font-family: Lora, Georgia, serif; font-size: .82rem; font-weight: 500; line-height: 1.35; }
     .career-detail { display: block; margin-top: .22rem; color: var(--muted); font-size: .6rem; line-height: 1.45; }
-    .career-papers { display: flex; flex-wrap: wrap; gap: .28rem; margin-top: .65rem; }
+    .career-papers { display: flex; flex-wrap: wrap; align-content: start; gap: .28rem; min-height: 2.8rem; margin-top: .85rem; }
     main .career-papers a { padding: .16rem .38rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink) !important; background: color-mix(in srgb, var(--paper-deep) 55%, transparent); font-family: 'DM Mono', monospace; font-size: .5rem; line-height: 1.35; text-decoration: none !important; }
     main .career-papers a:hover { border-color: var(--brick); color: var(--brick) !important; }
     #news li { padding: .55rem 0; border-bottom: 1px solid var(--line); }
@@ -1175,14 +1193,17 @@
       .career-timeline::before { top: .4rem; bottom: .4rem; left: .38rem; right: auto; width: 1px; height: auto; }
       .career-timeline li { min-height: 5.5rem; padding: 0 0 1.5rem 1rem; }
       .career-timeline li:last-child { min-height: 0; padding-bottom: 0; }
-      .career-dot { top: .05rem; left: -1.35rem; }
+      .career-moment { min-height: 0; }
+      .career-dot { position: absolute; top: .05rem; left: -1.35rem; }
       .career-timeline time { margin-bottom: .25rem; }
+      .career-papers { min-height: 0; margin-top: .65rem; }
       .contact-note { padding: 1.5rem; }
       footer > div { padding-inline: 1rem !important; }
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
       .availability-note > span { animation: none; }
+      .career-timeline .is-current .career-dot { animation: none; }
     }
   </style>
 
