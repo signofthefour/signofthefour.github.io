@@ -59,6 +59,7 @@
         <a href="#news"         class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">News</a>
         <a href="#experience"   class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Experience</a>
         <a href="#projects"     class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Projects</a>
+        <a href="#demos" class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Demos</a>
         <a href="#publications" class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Publications</a>
         <a href="#education"    class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Education</a>
         <a href="#honors"       class="nav-link px-3 py-1.5 rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Honors</a>
@@ -87,6 +88,7 @@
         <a href="#news"         class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">News</a>
         <a href="#experience"   class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Experience</a>
         <a href="#projects"     class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Projects</a>
+        <a href="#demos" class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Demos</a>
         <a href="#publications" class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Publications</a>
         <a href="#education"    class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Education</a>
         <a href="#honors"       class="mob-link px-3 py-2.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">Honors</a>
@@ -182,7 +184,7 @@
       <!-- About -->
       <section id="about">
         <p class="eyebrow">Hello, I’m</p>
-        <h1 class="hero-name"><span>Tan Dat</span> Nguyen</h1>
+        <h1 class="hero-name"><span class="name-pronunciation" tabindex="0" aria-describedby="name-pronunciation-tip">Tan Dat<span id="name-pronunciation-tip" role="tooltip"><small>/tən ɗaːt̚/</small></span></span> Nguyen</h1>
         <p class="hero-role">I build efficient speech systems that can listen, reason, and respond in real time.</p>
         <div class="space-y-3 text-gray-700 dark:text-gray-300 leading-relaxed">
           <p>
@@ -448,6 +450,30 @@
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <!-- Demo directory -->
+      <section id="demos" aria-labelledby="demos-heading">
+        <div class="demo-heading-row">
+          <div>
+            <p class="demo-kicker">Listen &amp; explore</p>
+            <h2 id="demos-heading">Research Demos</h2>
+          </div>
+          <p>Audio samples and interactive project pages.</p>
+        </div>
+        <div class="demo-directory">
+          <a data-demo-card href="https://onemeee.github.io/wand-tts/" target="_blank" rel="noopener"><span><strong>WAND</strong><small>Efficient autoregressive TTS</small></span><span class="demo-meta">TTS · 2026 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://mm.kaist.ac.kr/projects/mamtra/" target="_blank" rel="noopener"><span><strong>MamTra</strong><small>Mamba–Transformer speech synthesis</small></span><span class="demo-meta">TTS · 2026 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://mm.kaist.ac.kr/projects/SPADE/" target="_blank" rel="noopener"><span><strong>SPADE</strong><small>Compressed LLM-based TTS</small></span><span class="demo-meta">TTS · 2026 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://hieugiaosu.github.io/MAGE/" target="_blank" rel="noopener"><span><strong>MAGE</strong><small>Coarse-to-fine speech enhancement</small></span><span class="demo-meta">Enhancement · 2026 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://mm.kaist.ac.kr/projects/mtp/" target="_blank" rel="noopener"><span><strong>Multi-Token Prediction</strong><small>Accelerated codec speech synthesis</small></span><span class="demo-meta">TTS · 2025 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://mm.kaist.ac.kr/projects/AdaptVC/" target="_blank" rel="noopener"><span><strong>AdaptVC</strong><small>High-quality voice conversion</small></span><span class="demo-meta">Voice conversion · 2025 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://mm.kaist.ac.kr/projects/voicedit/" target="_blank" rel="noopener"><span><strong>VoiceDiT</strong><small>Multi-task generative voice model</small></span><span class="demo-meta">Speech · 2025 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://mm.kaist.ac.kr/projects/FreGrad/" target="_blank" rel="noopener"><span><strong>FreGrad</strong><small>Lightweight diffusion vocoder</small></span><span class="demo-meta">Vocoder · 2024 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://anonymous.4open.science/w/WHYV/" target="_blank" rel="noopener"><span><strong>WHYV</strong><small>Universal audio filtering</small></span><span class="demo-meta">Audio · 2024 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://signofthefour.github.io/calib-stylespeech-demo/" target="_blank" rel="noopener"><span><strong>Calib-StyleSpeech</strong><small>Few-shot speaker adaptation</small></span><span class="demo-meta">TTS · 2021 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+          <a data-demo-card href="https://signofthefour.github.io/bahnar_demo/" target="_blank" rel="noopener"><span><strong>Bahnar TTS</strong><small>Low-resource speech synthesis</small></span><span class="demo-meta">TTS · 2021 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
         </div>
       </section>
 
@@ -1030,13 +1056,22 @@
     #news { grid-column: 1; grid-row: 3; min-width: 0; margin-top: 5.5rem !important; }
     #experience { grid-column: 1 / -1; grid-row: 4; min-width: 0; margin-top: 6.5rem !important; }
     #projects { grid-column: 1 / -1; grid-row: 5; min-width: 0; margin-top: 6.5rem !important; }
-    #publications { grid-column: 1 / -1; grid-row: 6; min-width: 0; margin-top: 6.5rem !important; }
-    #education { grid-column: 1 / -1; grid-row: 7; min-width: 0; margin-top: 6.5rem !important; }
-    #honors { grid-column: 1 / -1; grid-row: 8; min-width: 0; margin-top: 6.5rem !important; }
-    #contact { grid-column: 1 / -1; grid-row: 9; min-width: 0; margin-top: 6.5rem !important; }
+    #demos { grid-column: 1 / -1; grid-row: 6; min-width: 0; margin-top: 6.5rem !important; }
+    #publications { grid-column: 1 / -1; grid-row: 7; min-width: 0; margin-top: 6.5rem !important; }
+    #education { grid-column: 1 / -1; grid-row: 8; min-width: 0; margin-top: 6.5rem !important; }
+    #honors { grid-column: 1 / -1; grid-row: 9; min-width: 0; margin-top: 6.5rem !important; }
+    #contact { grid-column: 1 / -1; grid-row: 10; min-width: 0; margin-top: 6.5rem !important; }
     #about .eyebrow { margin: 0 0 .7rem; color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
     .hero-name { margin: 0 0 1.35rem; color: var(--ink); font-size: clamp(2.15rem, 5vw, 3.55rem); line-height: 1.04; letter-spacing: -.045em; font-weight: 700; }
-    .hero-name span { display: inline; padding: .01em .1em .04em; background: linear-gradient(transparent 12%, var(--highlight) 12%, var(--highlight) 90%, transparent 90%); }
+    .hero-name > span { display: inline; padding: .01em .1em .04em; background: linear-gradient(transparent 12%, var(--highlight) 12%, var(--highlight) 90%, transparent 90%); }
+    .name-pronunciation { position: relative; cursor: help; outline: none; }
+    .name-pronunciation:focus-visible { border-radius: 2px; box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--brick); }
+    #name-pronunciation-tip { position: absolute; z-index: 10; left: 50%; bottom: calc(100% + .7rem); display: block; min-width: max-content; padding: .55rem .75rem; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); background: var(--paper-deep); box-shadow: 0 8px 24px rgba(41, 40, 38, .14); opacity: 0; pointer-events: none; transform: translate(-50%, .3rem); transition: opacity .16s ease, transform .16s ease; }
+    #name-pronunciation-tip::after { content: ''; position: absolute; left: 50%; top: 100%; width: .55rem; height: .55rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper-deep); transform: translate(-50%, -50%) rotate(45deg); }
+    #name-pronunciation-tip strong, #name-pronunciation-tip small { display: block; color: inherit; font-weight: 400; text-align: center; }
+    #name-pronunciation-tip strong { font-family: Lora, Georgia, serif; font-size: .72rem; }
+    #name-pronunciation-tip small { margin-top: .12rem; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: .03em; }
+    .name-pronunciation:hover #name-pronunciation-tip, .name-pronunciation:focus #name-pronunciation-tip { opacity: 1; transform: translate(-50%, 0); }
     .hero-role { max-width: 31ch; margin: 0 0 2rem; color: var(--ink); font-family: Lora, Georgia, serif; font-size: 1.25rem; font-style: italic; line-height: 1.5; }
     .availability-note { display: inline-flex; align-items: center; gap: .5rem; margin-bottom: .75rem; color: var(--muted); font-size: .68rem; font-weight: 500; letter-spacing: .025em; }
     .availability-note > span { width: .46rem; height: .46rem; border-radius: 50%; background: #4f9b6d; box-shadow: 0 0 0 3px color-mix(in srgb, #4f9b6d 15%, transparent); animation: availability-blink 1.8s ease-in-out infinite; }
@@ -1093,6 +1128,20 @@
     #projects .grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 1.35rem !important; }
     #projects .grid > div { background: transparent !important; border-color: var(--line) !important; border-radius: 10px !important; }
     #projects .aspect-video { background: var(--paper-deep) !important; border-color: var(--line) !important; }
+    .demo-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.5rem; }
+    .demo-heading-row h2 { margin-bottom: 0 !important; }
+    .demo-heading-row > p { max-width: 30ch; color: var(--muted) !important; font-family: Lora, Georgia, serif; font-size: .75rem; font-style: italic; text-align: right; }
+    .demo-kicker { margin-bottom: .35rem; color: var(--brick) !important; font-family: 'DM Mono', monospace; font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; }
+    .demo-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+    .demo-directory > a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-width: 0; padding: 1rem .9rem; border-bottom: 1px solid var(--line); color: var(--ink) !important; text-decoration: none !important; transition: background .18s ease, color .18s ease; }
+    .demo-directory > a:nth-child(odd) { border-right: 1px solid var(--line); padding-left: 0; }
+    .demo-directory > a:hover { color: var(--brick) !important; background: color-mix(in srgb, var(--brick) 4%, transparent); }
+    .demo-directory > a > span:first-child { min-width: 0; }
+    .demo-directory strong, .demo-directory small { display: block; }
+    .demo-directory strong { color: inherit; font-family: Lora, Georgia, serif; font-size: .85rem; font-weight: 500; }
+    .demo-directory small { margin-top: .2rem; overflow: hidden; color: var(--muted); font-size: .62rem; line-height: 1.4; text-overflow: ellipsis; white-space: nowrap; }
+    .demo-meta { flex: 0 0 auto; color: var(--muted) !important; font-family: 'DM Mono', monospace; font-size: .52rem; white-space: nowrap; }
+    .demo-meta i { margin-left: .25rem; color: var(--brick); font-size: .48rem; }
     .badge { border-radius: 999px !important; background: var(--paper-deep) !important; color: var(--muted) !important; }
     .pill { border-color: var(--line) !important; color: var(--ink) !important; border-radius: 999px !important; }
     .pill:hover { border-color: var(--brick) !important; color: var(--brick) !important; }
@@ -1174,10 +1223,11 @@
       #news { grid-column: 1; grid-row: 4; margin-top: 5rem !important; }
       #experience { grid-column: 1; grid-row: 5; margin-top: 5rem !important; }
       #projects { grid-column: 1; grid-row: 6; margin-top: 5rem !important; }
-      #publications { grid-column: 1; grid-row: 7; margin-top: 5rem !important; }
-      #education { grid-column: 1; grid-row: 8; margin-top: 5rem !important; }
-      #honors { grid-column: 1; grid-row: 9; margin-top: 5rem !important; }
-      #contact { grid-column: 1; grid-row: 10; margin-top: 5rem !important; }
+      #demos { grid-column: 1; grid-row: 7; margin-top: 5rem !important; }
+      #publications { grid-column: 1; grid-row: 8; margin-top: 5rem !important; }
+      #education { grid-column: 1; grid-row: 9; margin-top: 5rem !important; }
+      #honors { grid-column: 1; grid-row: 10; margin-top: 5rem !important; }
+      #contact { grid-column: 1; grid-row: 11; margin-top: 5rem !important; }
       aside .w-20 { max-width: 320px; margin: 0 auto; }
       #projects .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     }
@@ -1186,6 +1236,10 @@
       body > div.max-w-5xl { padding: 2.25rem 1rem 0 !important; }
       .hero-name { font-size: 2.45rem; }
       #projects .grid { grid-template-columns: 1fr !important; }
+      .demo-heading-row { align-items: start; }
+      .demo-heading-row > p { display: none; }
+      .demo-directory { grid-template-columns: 1fr; }
+      .demo-directory > a:nth-child(odd) { border-right: 0; padding-left: .9rem; }
       .profile-row { grid-template-columns: 1fr; gap: .45rem; }
       .career-heading-row { align-items: start; }
       .career-legend { display: none; }
