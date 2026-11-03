@@ -98,13 +98,16 @@
 
         <!-- Avatar + identity -->
         <div class="flex items-center gap-5 lg:block lg:space-y-4">
-          <div class="lg:flex lg:justify-center">
-            <div class="w-20 h-20 lg:w-36 lg:h-36 rounded-full overflow-hidden shrink-0 shadow-sm ring-2 ring-white dark:ring-gray-950 ring-offset-2 ring-offset-white dark:ring-offset-gray-950 bg-white">
-              <img src="DSCF0519.jpg" alt="Tan Dat Nguyen outdoors"
-                   style="display:block; width:85%; height:auto; margin:0 auto;">
-            </div>
+          <div class="portrait-stack" aria-label="MMAI travel photos">
+            <figure class="portrait-card portrait-card--sydney" tabindex="0">
+              <img src="DSCF7502-cropped.jpg" alt="Tan Dat Nguyen at the Sydney waterfront in Australia">
+              <figcaption class="portrait-caption">Sydney, Australia w. MMAI</figcaption>
+            </figure>
+            <figure class="portrait-card portrait-card--honolulu" tabindex="0">
+              <img src="DSCF0519.jpg" alt="Tan Dat Nguyen overlooking the coast in Honolulu, Hawaii">
+              <figcaption class="portrait-caption">Honolulu, Hawaii@USA w. MMAI</figcaption>
+            </figure>
           </div>
-          <p class="portrait-caption">Honolulu, Hawaii@USA w. MMAI</p>
           <div class="sidebar-opportunities">
             <div class="availability-note" role="status">
               <span aria-hidden="true"></span>
@@ -452,14 +455,15 @@
 
         <!-- Stats dashboard -->
         <div class="flex flex-wrap items-center gap-3 mb-4 pb-4 border-b border-gray-100 dark:border-gray-800/60">
-          <div class="flex items-baseline gap-1.5">
-            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">12</span>
-            <span class="text-xs text-gray-400 dark:text-gray-500">papers</span>
-          </div>
-          <span class="text-gray-200 dark:text-gray-700 select-none text-sm">·</span>
-          <div class="flex items-baseline gap-1.5">
-            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">7</span>
-            <span class="text-xs text-gray-400 dark:text-gray-500">first-authored</span>
+          <div class="publication-scope" role="group" aria-label="Filter by authorship">
+            <button type="button" class="publication-scope-button active" data-scope="all" aria-pressed="true">
+              <span class="text-lg font-bold">12</span>
+              <span class="text-xs">papers</span>
+            </button>
+            <button type="button" class="publication-scope-button" data-scope="first-authored" aria-pressed="false">
+              <span class="text-lg font-bold">7</span>
+              <span class="text-xs">first-authored</span>
+            </button>
           </div>
           <div class="w-px h-3.5 bg-gray-200 dark:bg-gray-700 mx-0.5"></div>
           <span class="badge bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">ICASSP ×6</span>
@@ -475,17 +479,17 @@
         </p>
 
         <div class="publication-filters" role="group" aria-label="Filter publications">
-          <button type="button" class="publication-filter active" data-filter="all" aria-pressed="true">All <span>12</span></button>
-          <button type="button" class="publication-filter" data-filter="conference" aria-pressed="false">Conference <span>11</span></button>
-          <button type="button" class="publication-filter" data-filter="preprint" aria-pressed="false">Preprint <span>1</span></button>
+          <button type="button" class="publication-filter active" data-type-filter="all" aria-pressed="true">All <span>12</span></button>
+          <button type="button" class="publication-filter" data-type-filter="conference" aria-pressed="false">Conference <span>11</span></button>
+          <button type="button" class="publication-filter" data-type-filter="preprint" aria-pressed="false">Preprint <span>1</span></button>
         </div>
 
         <div class="space-y-10">
 
           <!-- ── 2026 ── -->
-          <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">2026</h3>
-            <div class="space-y-8">
+          <details class="publication-year" open>
+            <summary class="text-xs font-semibold uppercase tracking-widest">2026<span class="publication-year-icon" aria-hidden="true"></span></summary>
+            <div class="publication-year-papers space-y-8">
 
           <!-- WAND -->
           <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
@@ -584,12 +588,12 @@
           </article>
 
             </div><!-- /2026 papers -->
-          </div><!-- /2026 group -->
+          </details><!-- /2026 group -->
 
           <!-- ── 2025 ── -->
-          <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">2025</h3>
-            <div class="space-y-8">
+          <details class="publication-year">
+            <summary class="text-xs font-semibold uppercase tracking-widest">2025<span class="publication-year-icon" aria-hidden="true"></span></summary>
+            <div class="publication-year-papers space-y-8">
 
           <!-- Accelerating Codec -->
           <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
@@ -661,12 +665,12 @@
           </article>
 
             </div><!-- /2025 papers -->
-          </div><!-- /2025 group -->
+          </details><!-- /2025 group -->
 
           <!-- ── 2024 ── -->
-          <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">2024</h3>
-            <div class="space-y-8">
+          <details class="publication-year">
+            <summary class="text-xs font-semibold uppercase tracking-widest">2024<span class="publication-year-icon" aria-hidden="true"></span></summary>
+            <div class="publication-year-papers space-y-8">
 
           <!-- FreGrad -->
           <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
@@ -717,12 +721,12 @@
           </article>
 
             </div><!-- /2024 papers -->
-          </div><!-- /2024 group -->
+          </details><!-- /2024 group -->
 
           <!-- ── 2022 ── -->
-          <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">2022</h3>
-            <div class="space-y-8">
+          <details class="publication-year">
+            <summary class="text-xs font-semibold uppercase tracking-widest">2022<span class="publication-year-icon" aria-hidden="true"></span></summary>
+            <div class="publication-year-papers space-y-8">
 
           <!-- Instance-Based TL -->
           <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
@@ -747,12 +751,12 @@
           </article>
 
             </div><!-- /2022 papers -->
-          </div><!-- /2022 group -->
+          </details><!-- /2022 group -->
 
           <!-- ── 2021 ── -->
-          <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">2021</h3>
-            <div class="space-y-8">
+          <details class="publication-year">
+            <summary class="text-xs font-semibold uppercase tracking-widest">2021<span class="publication-year-icon" aria-hidden="true"></span></summary>
+            <div class="publication-year-papers space-y-8">
 
           <!-- Calib-StyleSpeech -->
           <article class="reveal flex gap-4 sm:gap-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 p-4 transition-colors">
@@ -803,7 +807,7 @@
           </article>
 
             </div><!-- /2021 papers -->
-          </div><!-- /2021 group -->
+          </details><!-- /2021 group -->
 
         </div>
       </section>
@@ -996,11 +1000,14 @@
     aside { grid-column: 2; grid-row: 1; width: auto !important; margin: 0 !important; }
     aside > div { position: static !important; }
     aside .flex.items-center.gap-5 { display: block !important; }
-    aside .lg\:flex.lg\:justify-center { display: block !important; }
-    aside .w-20 { width: 100% !important; height: auto !important; aspect-ratio: auto; padding: 8px 8px 24px; border: 1px solid #ded8ce; border-radius: 2px !important; box-shadow: 0 3px 6px rgba(47,38,30,.08), 0 18px 35px rgba(47,38,30,.13) !important; ring: 0 !important; overflow: hidden; background-color: #f8f5ed !important; background-image: repeating-linear-gradient(105deg, rgba(91,76,56,.025) 0, rgba(91,76,56,.025) 1px, transparent 1px, transparent 4px); transform: rotate(-.65deg); transition: transform .25s ease, box-shadow .25s ease; }
-    aside .w-20:hover { transform: rotate(0deg) translateY(-2px); box-shadow: 0 4px 8px rgba(47,38,30,.09), 0 22px 40px rgba(47,38,30,.16) !important; }
-    aside .w-20 img { width: 100% !important; height: auto !important; aspect-ratio: 4 / 5; margin: 0 !important; border: 1px solid rgba(60,50,40,.12); border-radius: 0; object-fit: cover; }
-    .portrait-caption { margin: .55rem 0 0 !important; color: var(--muted) !important; font-family: Lora, Georgia, serif; font-size: .72rem; font-style: italic; text-align: center; }
+    .portrait-stack { position: relative; width: 100%; max-width: 320px; aspect-ratio: 3 / 4; margin: 0 auto; padding: .25rem; }
+    .portrait-card { position: absolute; top: .25rem; bottom: .25rem; width: 72%; margin: 0; padding: 8px 8px .65rem; border: 1px solid #ded8ce; border-radius: 2px; box-shadow: 0 3px 6px rgba(47,38,30,.08), 0 18px 35px rgba(47,38,30,.13); overflow: hidden; background-color: #f8f5ed; background-image: repeating-linear-gradient(105deg, rgba(91,76,56,.025) 0, rgba(91,76,56,.025) 1px, transparent 1px, transparent 4px); transition: width .28s ease, transform .25s ease, box-shadow .25s ease; }
+    .portrait-card--sydney { left: 0; z-index: 2; transform: rotate(-.65deg); }
+    .portrait-card--honolulu { right: 0; z-index: 1; transform: rotate(1deg); }
+    .portrait-card:hover, .portrait-card:focus { z-index: 3; width: 100%; transform: rotate(0deg) translateY(-2px); box-shadow: 0 4px 8px rgba(47,38,30,.09), 0 22px 40px rgba(47,38,30,.16); }
+    .portrait-card:focus-visible { outline: 2px solid var(--brick); outline-offset: 2px; }
+    .portrait-card img { display: block; width: 100%; height: calc(100% - 2.8rem); margin: 0; border: 1px solid rgba(60,50,40,.12); border-radius: 0; object-fit: cover; }
+    .portrait-caption { margin: .55rem 0 0 !important; overflow: hidden; color: #665f58 !important; font-family: Lora, Georgia, serif; font-size: .72rem; font-style: italic; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
     .sidebar-opportunities { max-width: 320px; margin: 1rem auto .2rem; padding: .8rem 0 .15rem; border-top: 1px solid var(--line); }
     .sidebar-opportunities .availability-note { display: flex; justify-content: center; margin-bottom: .7rem; line-height: 1.45; white-space: nowrap; }
     .sidebar-opportunities .hero-actions { justify-content: center; margin-bottom: 0; }
@@ -1021,14 +1028,14 @@
 
     main { display: contents; }
     #about { grid-column: 1; grid-row: 1; min-width: 0; }
-    #career { grid-column: 1 / -1; grid-row: 2; min-width: 0; margin-top: 6.5rem !important; }
-    #news { grid-column: 1; grid-row: 3; min-width: 0; margin-top: 5.5rem !important; }
-    #experience { grid-column: 1 / -1; grid-row: 4; min-width: 0; margin-top: 6.5rem !important; }
-    #projects { grid-column: 1 / -1; grid-row: 5; min-width: 0; margin-top: 6.5rem !important; }
-    #publications { grid-column: 1 / -1; grid-row: 6; min-width: 0; margin-top: 6.5rem !important; }
-    #education { grid-column: 1 / -1; grid-row: 7; min-width: 0; margin-top: 6.5rem !important; }
-    #honors { grid-column: 1 / -1; grid-row: 8; min-width: 0; margin-top: 6.5rem !important; }
-    #contact { grid-column: 1 / -1; grid-row: 9; min-width: 0; margin-top: 6.5rem !important; }
+    #career { grid-column: 1 / -1; grid-row: 2; min-width: 0; margin-top: 3.25rem !important; }
+    #news { grid-column: 1; grid-row: 3; min-width: 0; margin-top: 2.75rem !important; }
+    #experience { grid-column: 1 / -1; grid-row: 4; min-width: 0; margin-top: 3.25rem !important; }
+    #projects { grid-column: 1 / -1; grid-row: 5; min-width: 0; margin-top: 3.25rem !important; }
+    #publications { grid-column: 1 / -1; grid-row: 6; min-width: 0; margin-top: 3.25rem !important; }
+    #education { grid-column: 1 / -1; grid-row: 7; min-width: 0; margin-top: 3.25rem !important; }
+    #honors { grid-column: 1 / -1; grid-row: 8; min-width: 0; margin-top: 3.25rem !important; }
+    #contact { grid-column: 1 / -1; grid-row: 9; min-width: 0; margin-top: 3.25rem !important; }
     #about .eyebrow { margin: 0 0 .7rem; color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
     .hero-name { margin: 0 0 1.35rem; color: var(--ink); font-size: clamp(2.15rem, 5vw, 3.55rem); line-height: 1.04; letter-spacing: -.045em; font-weight: 700; }
     .hero-name > span { display: inline; padding: .01em .1em .04em; background: linear-gradient(transparent 12%, var(--highlight) 12%, var(--highlight) 90%, transparent 90%); }
@@ -1105,12 +1112,27 @@
     .pill { border-color: var(--line) !important; color: var(--ink) !important; border-radius: 999px !important; }
     .pill:hover { border-color: var(--brick) !important; color: var(--brick) !important; }
     article { background: transparent !important; border-color: var(--line) !important; border-radius: 0 !important; box-shadow: none !important; }
+    #publications [hidden] { display: none !important; }
     #publications article { border-radius: 14px !important; }
+    .publication-scope { display: inline-flex; align-items: stretch; gap: .35rem; }
+    .publication-scope-button { display: inline-flex; align-items: baseline; gap: .38rem; padding: .28rem .5rem; border: 1px solid transparent; border-radius: 8px; color: var(--muted); background: transparent; transition: color .18s ease, border-color .18s ease, background .18s ease; }
+    .publication-scope-button span { color: inherit !important; }
+    .publication-scope-button:hover, .publication-scope-button.active { border-color: color-mix(in srgb, var(--brick) 65%, var(--line)); color: var(--brick); background: color-mix(in srgb, var(--brick) 5%, transparent); }
+    .publication-scope-button:focus-visible { outline: 2px solid var(--brick); outline-offset: 2px; }
     .publication-filters { display: flex; align-items: center; gap: .45rem; margin: -1rem 0 1.6rem; }
     .publication-filter { display: inline-flex; align-items: center; gap: .38rem; padding: .36rem .68rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: transparent; font-size: .65rem; transition: color .18s ease, border-color .18s ease, background .18s ease; }
     .publication-filter span { color: inherit !important; font-family: 'DM Mono', monospace; font-size: .55rem; opacity: .72; }
     .publication-filter:hover, .publication-filter.active { border-color: color-mix(in srgb, var(--brick) 65%, var(--line)); color: var(--brick); background: color-mix(in srgb, var(--brick) 5%, transparent); }
     .publication-filter:focus-visible { outline: 2px solid var(--brick); outline-offset: 2px; }
+    .publication-year > summary { display: flex; align-items: center; justify-content: space-between; padding: .55rem .7rem; border-bottom: 1px solid var(--line); color: var(--muted); cursor: pointer; list-style: none; transition: color .18s ease, background .18s ease; }
+    .publication-year > summary::-webkit-details-marker { display: none; }
+    .publication-year > summary:hover { color: var(--brick); background: color-mix(in srgb, var(--brick) 4%, transparent); }
+    .publication-year > summary:focus-visible { outline: 2px solid var(--brick); outline-offset: 2px; }
+    .publication-year[open] > summary { margin-bottom: 1.5rem; color: var(--brick); }
+    .publication-year-icon { position: relative; width: .7rem; height: .7rem; color: inherit !important; }
+    .publication-year-icon::before, .publication-year-icon::after { content: ''; position: absolute; top: 50%; left: 50%; width: .7rem; height: 1px; background: currentColor; transform: translate(-50%, -50%); }
+    .publication-year-icon::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .18s ease; }
+    .publication-year[open] .publication-year-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
     .pill.cite-button { cursor: pointer; background: transparent; font-family: inherit; }
     .paper-visual {
       position: relative;
@@ -1178,15 +1200,15 @@
       body > div.max-w-5xl { grid-template-columns: 1fr !important; padding-top: 2.5rem !important; }
       aside { grid-column: 1; grid-row: 2; margin-top: 2.5rem !important; }
       #about { grid-column: 1; grid-row: 1; }
-      #career { grid-column: 1; grid-row: 3; margin-top: 5rem !important; }
-      #news { grid-column: 1; grid-row: 4; margin-top: 5rem !important; }
-      #experience { grid-column: 1; grid-row: 5; margin-top: 5rem !important; }
-      #projects { grid-column: 1; grid-row: 6; margin-top: 5rem !important; }
-      #publications { grid-column: 1; grid-row: 7; margin-top: 5rem !important; }
-      #education { grid-column: 1; grid-row: 8; margin-top: 5rem !important; }
-      #honors { grid-column: 1; grid-row: 9; margin-top: 5rem !important; }
-      #contact { grid-column: 1; grid-row: 10; margin-top: 5rem !important; }
-      aside .w-20 { max-width: 320px; margin: 0 auto; }
+      #career { grid-column: 1; grid-row: 3; margin-top: 2.5rem !important; }
+      #news { grid-column: 1; grid-row: 4; margin-top: 2.5rem !important; }
+      #experience { grid-column: 1; grid-row: 5; margin-top: 2.5rem !important; }
+      #projects { grid-column: 1; grid-row: 6; margin-top: 2.5rem !important; }
+      #publications { grid-column: 1; grid-row: 7; margin-top: 2.5rem !important; }
+      #education { grid-column: 1; grid-row: 8; margin-top: 2.5rem !important; }
+      #honors { grid-column: 1; grid-row: 9; margin-top: 2.5rem !important; }
+      #contact { grid-column: 1; grid-row: 10; margin-top: 2.5rem !important; }
+      .portrait-stack { max-width: 320px; }
       #projects .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     }
     @media (max-width: 768px) {
@@ -1214,6 +1236,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
+      .portrait-card { transition: none; }
       .availability-note > span { animation: none; }
       .career-timeline .is-current .career-dot { animation: none; }
     }
@@ -1254,8 +1277,16 @@
       return `@${entryType}{${meta.key},\n  title     = {${meta.title}},\n  author    = {${meta.authors}},\n${venueField}\n  year      = {${meta.year}},\n  url       = {${meta.url}}\n}`;
     }
 
+    function isFirstAuthored(rawAuthors) {
+      const authors = rawAuthors.split(';').map(author => author.trim());
+      const authorIndex = authors.findIndex(author => author.replace(/\*$/, '') === 'Tan Dat Nguyen');
+      if (authorIndex < 0) return false;
+      return authorIndex === 0 || authors.slice(0, authorIndex + 1).every(author => author.endsWith('*'));
+    }
+
     publicationArticles.forEach(article => {
       article.dataset.type = publicationMeta(article).type;
+      article.dataset.firstAuthored = String(isFirstAuthored(article.querySelector('[data-authors]')?.dataset.authors || ''));
       const actions = article.querySelector('.pill')?.parentElement;
       if (!actions) return;
       const cite = document.createElement('button');
@@ -1283,20 +1314,40 @@
       actions.append(cite);
     });
 
+    const publicationState = { type: 'all', scope: 'all' };
+
+    function renderPublications() {
+      publicationArticles.forEach(article => {
+        const matchesType = publicationState.type === 'all' || article.dataset.type === publicationState.type;
+        const matchesScope = publicationState.scope === 'all' || article.dataset.firstAuthored === 'true';
+        article.hidden = !(matchesType && matchesScope);
+      });
+      document.querySelectorAll('#publications .publication-year').forEach(yearGroup => {
+        yearGroup.hidden = ![...yearGroup.querySelectorAll('article')].some(article => !article.hidden);
+      });
+    }
+
     document.querySelectorAll('.publication-filter').forEach(button => {
       button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
+        publicationState.type = button.dataset.typeFilter;
         document.querySelectorAll('.publication-filter').forEach(item => {
           const selected = item === button;
           item.classList.toggle('active', selected);
           item.setAttribute('aria-pressed', String(selected));
         });
-        publicationArticles.forEach(article => {
-          article.hidden = filter !== 'all' && article.dataset.type !== filter;
+        renderPublications();
+      });
+    });
+
+    document.querySelectorAll('.publication-scope-button').forEach(button => {
+      button.addEventListener('click', () => {
+        publicationState.scope = button.dataset.scope;
+        document.querySelectorAll('.publication-scope-button').forEach(item => {
+          const selected = item === button;
+          item.classList.toggle('active', selected);
+          item.setAttribute('aria-pressed', String(selected));
         });
-        document.querySelectorAll('#publications > .space-y-10 > div').forEach(yearGroup => {
-          yearGroup.hidden = ![...yearGroup.querySelectorAll('article')].some(article => !article.hidden);
-        });
+        renderPublications();
       });
     });
 
