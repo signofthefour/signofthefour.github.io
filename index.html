@@ -1107,7 +1107,7 @@
     .career-kicker { margin: 0 0 .35rem; color: var(--brick); font-family: 'DM Mono', monospace; font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; }
     .career-legend { display: flex; align-items: center; gap: .4rem; margin: 0 0 .7rem; color: var(--muted); font-size: .6rem; }
     .career-legend span { width: .42rem; height: .42rem; border-radius: 50%; background: var(--brick); }
-    .career-timeline { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
+    .career-timeline { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(7.4rem, 1fr); overflow-x: auto; margin: 0; padding: 0 0 .4rem; list-style: none; }
     .career-timeline::before { content: ''; position: absolute; top: 6.02rem; left: .5rem; right: .5rem; height: 1px; background: var(--line); }
     .career-timeline li { position: relative; min-width: 0; padding-right: .75rem; }
     .career-moment { min-height: 5.65rem; }
